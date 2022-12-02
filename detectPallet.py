@@ -1,30 +1,3 @@
-# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
-"""
-Run YOLOv5 detection inference on images, videos, directories, globs, YouTube, webcam, streams, etc.
-
-Usage - sources:
-    $ python detect.py --weights yolov5s.pt --source 0                               # webcam
-                                                     img.jpg                         # image
-                                                     vid.mp4                         # video
-                                                     path/                           # directory
-                                                     'path/*.jpg'                    # glob
-                                                     'https://youtu.be/Zgi9g1ksQHc'  # YouTube
-                                                     'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
-
-Usage - formats:
-    $ python detect.py --weights yolov5s.pt                 # PyTorch
-                                 yolov5s.torchscript        # TorchScript
-                                 yolov5s.onnx               # ONNX Runtime or OpenCV DNN with --dnn
-                                 yolov5s_openvino_model     # OpenVINO
-                                 yolov5s.engine             # TensorRT
-                                 yolov5s.mlmodel            # CoreML (macOS-only)
-                                 yolov5s_saved_model        # TensorFlow SavedModel
-                                 yolov5s.pb                 # TensorFlow GraphDef
-                                 yolov5s.tflite             # TensorFlow Lite
-                                 yolov5s_edgetpu.tflite     # TensorFlow Edge TPU
-                                 yolov5s_paddle_model       # PaddlePaddle
-"""
-
 import argparse
 import os
 import platform
@@ -45,9 +18,9 @@ from models.common import DetectMultiBackend
 from utils.dataloaders import IMG_FORMATS, VID_FORMATS, LoadImages, LoadScreenshots, LoadStreams
 from utils.general import (LOGGER, Profile, check_file, check_img_size, check_imshow, check_requirements, colorstr, cv2,
                            increment_path, non_max_suppression, print_args, scale_boxes, strip_optimizer, xyxy2xywh)
-from utils.plots import Annotator, colors, save_one_box
 from utils.torch_utils import select_device, smart_inference_mode
 
+cv_font = cv2.FONT_HERSHEY_SIMPLEX
 
 @smart_inference_mode()
 def run(
@@ -57,7 +30,7 @@ def run(
         imgsz=(640, 640),  # inference size (height, width)
         conf_thres=0.25,  # confidence threshold
         iou_thres=0.45,  # NMS IOU threshold
-        max_det=1000,  # maximum detections per image
+        max_det=5,  # maximum detections per image
         device='',  # cuda device, i.e. 0 or 0,1,2,3 or cpu
         view_img=False,  # show results
         save_txt=False,  # save results to *.txt
@@ -72,12 +45,13 @@ def run(
         project=ROOT / 'runs/detect',  # save results to project/name
         name='exp',  # save results to project/name
         exist_ok=False,  # existing project/name ok, do not increment
-        line_thickness=3,  # bounding box thickness (pixels)
+        line_thickness=2,  # bounding box thickness (pixels)
         hide_labels=False,  # hide labels
         hide_conf=False,  # hide confidences
         half=False,  # use FP16 half-precision inference
         dnn=False,  # use OpenCV DNN for ONNX inference
         vid_stride=1,  # video frame-rate stride
+        weights_name='',
 ):
     source = str(source)
     save_img = not nosave and not source.endswith('.txt')  # save inference images
@@ -159,16 +133,12 @@ def run(
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
 
                 # Write results
-                for *xyxy, conf, cls in reversed(det):
-                    # x = int((xyxy[0] + xyxy[2])/2)
-                    # y = int((xyxy[1] + xyxy[3])/2)
-                    # print(x, " dan ", y)
-                    
+                for *xyxy, conf, cls in reversed(det):                    
                     lw = line_thickness or max(round(sum(im0.shape) / 2 * 0.003), 2)
                     txt_color=(255, 255, 255)
 
                     c = int(cls)  # integer class
-                    color=colors(c, True)
+                    color=(10, 15, 255)
                     label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
 
                     p1, p2 = (int(xyxy[0]), int(xyxy[1])), (int(xyxy[2]), int(xyxy[3]))
@@ -186,21 +156,33 @@ def run(
                                     txt_color,
                                     thickness=tf,
                                     lineType=cv2.LINE_AA)
-                    # if save_txt:  # Write to file
-                    #     xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
-                    #     line = (cls, *xywh, conf) if save_conf else (cls, *xywh)  # label format
-                    #     with open(f'{txt_path}.txt', 'a') as f:
-                    #         f.write(('%g ' * len(line)).rstrip() % line + '\n')
+                    x = int((xyxy[0] + xyxy[2])/2)
+                    y = int((xyxy[1] + xyxy[3])/2)
+                    # coordinate_text = "(" + str(round(x)) + "," + str(round(y)) + ")" # pixel coordinate
+                    # cv2.putText(im0, text=coordinate_text, org=(x, y), # center coordinate pixel value
+                    # fontFace = cv_font, fontScale = 0.7, color=(255,255,255), thickness=1, lineType = cv2.LINE_AA)
+                    cv2.circle(im0,(x,y), 5, (0,255,0), -1) # center coordinate
+                    # cv2.line(im0, (x, 0), (x, imgsz[1]), (0, 100, 0), thickness=2) # vertical line 
+                    # cv2.circle(im0,(int(xyxy[0]), int(xyxy[1])), 5, (0,255,0), -1) # start coordinate
+                    # cv2.circle(im0,(int(xyxy[2]), int(xyxy[3])), 5, (255,0,0), -1) # end coordinate
+                    cv2.putText(im0, text="weights model : " + weights_name, org=(15, 20), # weights names
+                    fontFace = cv_font, fontScale = 0.6, color=(255,55,25), thickness=1, lineType = cv2.LINE_AA)
 
-                    # if save_img or save_crop or view_img:  # Add bbox to image
-                    #     c = int(cls)  # integer class
-                    #     label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
-                    #     annotator.box_label(xyxy, label, color=colors(c, True))
-                    #     print("a")
+                    # Find focal length of camera using Triangle Similiarity principle : RESULT (yolom = 952.69, yolos = 989.057, yolon = 975.829)
+                    # W = 50 # width of knowing object
+                    # D = 100 # distance from camera
+                    # P = int(xyxy[2] - xyxy[0])
+                    # F = round(P*D/W, 3)
+                    # if conf > 0.5:
+                    #     print(F)
 
-                    # if save_crop:
-                    #     save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)
-                    #     print("c")
+                    # Find object distance using Triangle Similiarity principle : RESULT (119.446)
+                    W = 50                    
+                    F = 952.69 if weights_name == 'yolov5m-100' else 989.057 if weights_name == 'yolov5s-100' else 975.829
+                    if conf > 0.4:
+                        P = int(xyxy[2] - xyxy[0])                        
+                        D = round(W*F/P, 3) # center distance
+                        print(D)
 
             # Stream results
             im0 = np.asarray(im0)
@@ -232,11 +214,11 @@ def run(
                     vid_writer[i].write(im0)
 
         # Print time (inference-only)
-        LOGGER.info(f"{s}{'' if len(det) else '(no detections), '}{dt[1].dt * 1E3:.1f}ms")
+        # LOGGER.info(f"{s}{'' if len(det) else '(no detections), '}{dt[1].dt * 1E3:.1f}ms")
 
     # Print results
     t = tuple(x.t / seen * 1E3 for x in dt)  # speeds per image
-    LOGGER.info(f'Speed: %.1fms pre-process, %.1fms inference, %.1fms NMS per image at shape {(1, 3, *imgsz)}' % t)
+    # LOGGER.info(f'Speed: %.1fms pre-process, %.1fms inference, %.1fms NMS per image at shape {(1, 3, *imgsz)}' % t)
     if save_txt or save_img:
         s = f"\n{len(list(save_dir.glob('labels/*.txt')))} labels saved to {save_dir / 'labels'}" if save_txt else ''
         LOGGER.info(f"Results saved to {colorstr('bold', save_dir)}{s}")
@@ -273,6 +255,7 @@ def parse_opt():
     parser.add_argument('--half', action='store_true', help='use FP16 half-precision inference')
     parser.add_argument('--dnn', action='store_true', help='use OpenCV DNN for ONNX inference')
     parser.add_argument('--vid-stride', type=int, default=1, help='video frame-rate stride')
+    parser.add_argument('--weights-name', type=str, default=ROOT / '', help='name of weights')
     opt = parser.parse_args()
     opt.imgsz *= 2 if len(opt.imgsz) == 1 else 1  # expand
     print_args(vars(opt))
