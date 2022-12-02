@@ -162,12 +162,16 @@ def run(
                     # cv2.putText(im0, text=coordinate_text, org=(x, y), # center coordinate pixel value
                     # fontFace = cv_font, fontScale = 0.7, color=(255,255,255), thickness=1, lineType = cv2.LINE_AA)
                     cv2.circle(im0,(x,y), 5, (0,255,0), -1) # center coordinate
+                    # cv2.circle(im0,(int(im0.shape[1]/2),int(im0.shape[0]/2)), 5, (0,255,255), -1) # center frame
                     # cv2.line(im0, (x, 0), (x, imgsz[1]), (0, 100, 0), thickness=2) # vertical line 
                     # cv2.circle(im0,(int(xyxy[0]), int(xyxy[1])), 5, (0,255,0), -1) # start coordinate
                     # cv2.circle(im0,(int(xyxy[2]), int(xyxy[3])), 5, (255,0,0), -1) # end coordinate
                     cv2.putText(im0, text="weights model : " + weights_name, org=(15, 20), # weights names
                     fontFace = cv_font, fontScale = 0.6, color=(255,55,25), thickness=1, lineType = cv2.LINE_AA)
 
+                    """
+                    USing pinhole Camera Model
+                    """
                     # Find focal length of camera using Triangle Similiarity principle : RESULT (yolom = 952.69, yolos = 989.057, yolon = 975.829)
                     # W = 50 # width of knowing object
                     # D = 100 # distance from camera
@@ -179,10 +183,20 @@ def run(
                     # Find object distance using Triangle Similiarity principle : RESULT (119.446)
                     W = 50                    
                     F = 952.69 if weights_name == 'yolov5m-100' else 989.057 if weights_name == 'yolov5s-100' else 975.829
+                    
                     if conf > 0.4:
                         P = int(xyxy[2] - xyxy[0])                        
-                        D = round(W*F/P, 3) # center distance
+                        CenterD = W*F/P # center distance
+                        dA = np.array((x,y))
+                        dB = np.array((int(im0.shape[1]/2),y))
+                        wA = np.array(p1)
+                        wB = np.array((int(xyxy[2]),int(xyxy[1])))
+                        SideD = (compute_euclidean(dA,dB) / compute_euclidean(wA,wB))*W
+                        D = round(np.hypot(CenterD,SideD),3)
+                        # print("Side Dist ",SideD)
                         print(D)
+                        # print("-------------------")                   
+                    
 
             # Stream results
             im0 = np.asarray(im0)
@@ -195,23 +209,23 @@ def run(
                 cv2.waitKey(1)  # 1 millisecond
 
             # Save results (image with detections)
-            if save_img:
-                if dataset.mode == 'image':
-                    cv2.imwrite(save_path, im0)
-                else:  # 'video' or 'stream'
-                    if vid_path[i] != save_path:  # new video
-                        vid_path[i] = save_path
-                        if isinstance(vid_writer[i], cv2.VideoWriter):
-                            vid_writer[i].release()  # release previous video writer
-                        if vid_cap:  # video
-                            fps = vid_cap.get(cv2.CAP_PROP_FPS)
-                            w = int(vid_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-                            h = int(vid_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-                        else:  # stream
-                            fps, w, h = 30, im0.shape[1], im0.shape[0]
-                        save_path = str(Path(save_path).with_suffix('.mp4'))  # force *.mp4 suffix on results videos
-                        vid_writer[i] = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
-                    vid_writer[i].write(im0)
+            # if save_img:
+            #     if dataset.mode == 'image':
+            #         cv2.imwrite(save_path, im0)
+            #     else:  # 'video' or 'stream'
+            #         if vid_path[i] != save_path:  # new video
+            #             vid_path[i] = save_path
+            #             if isinstance(vid_writer[i], cv2.VideoWriter):
+            #                 vid_writer[i].release()  # release previous video writer
+            #             if vid_cap:  # video
+            #                 fps = vid_cap.get(cv2.CAP_PROP_FPS)
+            #                 w = int(vid_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+            #                 h = int(vid_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+            #             else:  # stream
+            #                 fps, w, h = 30, im0.shape[1], im0.shape[0]
+            #             save_path = str(Path(save_path).with_suffix('.mp4'))  # force *.mp4 suffix on results videos
+            #             vid_writer[i] = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
+            #         vid_writer[i].write(im0)
 
         # Print time (inference-only)
         # LOGGER.info(f"{s}{'' if len(det) else '(no detections), '}{dt[1].dt * 1E3:.1f}ms")
@@ -219,12 +233,16 @@ def run(
     # Print results
     t = tuple(x.t / seen * 1E3 for x in dt)  # speeds per image
     # LOGGER.info(f'Speed: %.1fms pre-process, %.1fms inference, %.1fms NMS per image at shape {(1, 3, *imgsz)}' % t)
-    if save_txt or save_img:
-        s = f"\n{len(list(save_dir.glob('labels/*.txt')))} labels saved to {save_dir / 'labels'}" if save_txt else ''
-        LOGGER.info(f"Results saved to {colorstr('bold', save_dir)}{s}")
-    if update:
-        strip_optimizer(weights[0])  # update model (to fix SourceChangeWarning)
+    
+    
+    # if save_txt or save_img:
+    #     s = f"\n{len(list(save_dir.glob('labels/*.txt')))} labels saved to {save_dir / 'labels'}" if save_txt else ''
+    #     LOGGER.info(f"Results saved to {colorstr('bold', save_dir)}{s}")
+    # if update:
+    #     strip_optimizer(weights[0])  # update model (to fix SourceChangeWarning)
 
+def compute_euclidean(x, y):
+    return np.sqrt(np.sum((x-y)**2))
 
 def parse_opt():
     parser = argparse.ArgumentParser()
