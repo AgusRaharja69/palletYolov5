@@ -1,19 +1,14 @@
-import cv2
-
 import torch
 
 from models.common import DetectMultiBackend
 from utils.dataloaders import LoadStreams
 from utils.general import (Profile, check_img_size, cv2,
                            non_max_suppression, scale_boxes)
-from utils.torch_utils import select_device, smart_inference_mode
+from utils.torch_utils import select_device
 
-cv_font = cv2.FONT_HERSHEY_SIMPLEX
-
-# imResult, predResult = [], []
 # @smart_inference_mode()
 def run(
-        weights='runs/train/exp16/weights/best.pt',  # model path or triton URL
+        weights='runs/train/exp21/weights/best.pt',  # model path or triton URL
         source='1',  # file/dir/URL/glob/screen/0(webcam)
         data='data/data.yaml',  # dataset.yaml path
         imgsz=(320, 320),  # inference size (height, width)
@@ -64,20 +59,13 @@ def run(
             if len(det):
                 # Rescale boxes from img_size to im0 size
                 det[:, :4] = scale_boxes(im.shape[2:], det[:, :4], im0.shape).round() 
-                # imResult = im0
-                # predResult = det
-                print("im ",im0)
-                print("det ", det)
-                # return im0, det
+                # yield {'imR' : im0, 'detR' : det}
+                yield im0,det
 
-# run()
-# print("im ", imResult)
-# print("det ", predResult)
 def main():
-    run()
-    # # print(run())
-    # print("im ", imResult)
-    # print("det ", predResult)
+    for imResult, predResult in run():        
+        print("im ", imResult)
+        print("det ", predResult)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
