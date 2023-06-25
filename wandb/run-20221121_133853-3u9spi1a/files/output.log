@@ -1,0 +1,194 @@
+Overriding model.yaml nc=80 with nc=1
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1     16182  models.yolo.Detect                      [1, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model summary: 214 layers, 7022326 parameters, 7022326 gradients, 15.9 GFLOPs
+Transferred 343/349 items from yolov5s.pt
+[34m[1mAMP: [39m[22mchecks passed
+[34m[1moptimizer:[39m[22m SGD(lr=0.01) with parameter groups 57 weight(decay=0.0), 60 weight(decay=0.0005), 60 bias
+[34m[1mtrain: [39m[22mScanning 'D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\train\labels.cache' images and labels... 222 found, 0 missing, 3 empty, 0 corrupt: 100%|███
+[34m[1mval: [39m[22mScanning 'D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\valid\labels.cache' images and labels... 24 found, 0 missing, 0 empty, 0 corrupt: 100%|██████
+[34m[1mAutoAnchor: [39m[22m3.81 anchors/target, 1.000 Best Possible Recall (BPR). Current anchors are a good fit to dataset
+Plotting labels to runs\train\exp31\labels.jpg...
+Image sizes 320 train, 320 val
+Using 4 dataloader workers
+Logging results to [1mruns\train\exp31
+Starting training for 10 epochs...
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+        0/9     0.573G     0.1135    0.01858          0         15        320: 100%|██████████| 28/28 [00:23<00:00,  1.19it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/2 [00:00<?, ?it/s]
+fitness [[    0.20783    0.051282     0.10173     0.03283    0.076269    0.012104           0]]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:03<00:00,  1.54s/it]
+                   all         24         39      0.208     0.0513      0.102     0.0328
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+
+        1/9     0.879G    0.08558    0.02609          0         26        320: 100%|██████████| 28/28 [00:21<00:00,  1.29it/s]
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  50%|█████     | 1/2 [00:02<00:02,  2.54s/it]
+fitness [[    0.25007     0.36776     0.22296    0.078516    0.059766    0.011644           0]]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:02<00:00,  1.48s/it]
+                   all         24         39       0.25      0.368      0.223     0.0785
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+        2/9     0.879G    0.07601    0.02686          0         20        320: 100%|██████████| 28/28 [00:18<00:00,  1.50it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/2 [00:00<?, ?it/s]
+fitness [[    0.23384     0.35897     0.21656    0.060653     0.06123    0.010967           0]]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:02<00:00,  1.44s/it]
+                   all         24         39      0.234      0.359      0.217     0.0607
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+        3/9     0.879G    0.06962    0.02644          0         19        320: 100%|██████████| 28/28 [00:18<00:00,  1.54it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:02<00:00,  1.18s/it]
+                   all         24         39      0.448      0.462      0.409      0.143
+fitness [[    0.44841     0.46154     0.40881     0.14304    0.056629    0.010548           0]]
+fitness [[    0.44841     0.46154     0.40881     0.14304]]
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+
+        4/9     0.879G    0.06458    0.02539          0         26        320: 100%|██████████| 28/28 [00:18<00:00,  1.53it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/2 [00:00<?, ?it/s]
+fitness [[    0.34627      0.5641     0.32696     0.11827    0.057075    0.009172           0]]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:02<00:00,  1.18s/it]
+                   all         24         39      0.346      0.564      0.327      0.118
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+        5/9     0.879G    0.05712    0.02581          0         21        320: 100%|██████████| 28/28 [00:18<00:00,  1.54it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:02<00:00,  1.31s/it]
+                   all         24         39      0.708      0.641      0.653      0.301
+fitness [[    0.70808     0.64103     0.65312     0.30134    0.049153   0.0087164           0]]
+fitness [[    0.70808     0.64103     0.65312     0.30134]]
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+        6/9     0.879G    0.05134    0.02406          0         27        320: 100%|██████████| 28/28 [00:18<00:00,  1.49it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:02<00:00,  1.40s/it]
+                   all         24         39      0.531      0.551      0.495      0.198
+fitness [[    0.53063     0.55092     0.49514     0.19846    0.051115   0.0082853           0]]
+fitness [[    0.53063     0.55092     0.49514     0.19846]]
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+
+        7/9     0.879G     0.0496    0.02119          0         25        320: 100%|██████████| 28/28 [00:19<00:00,  1.47it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/2 [00:00<?, ?it/s]
+fitness [[    0.79115     0.64103     0.68445     0.33702    0.046047   0.0083858           0]]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:04<00:00,  2.04s/it]
+                   all         24         39      0.791      0.641      0.684      0.337
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+        8/9     0.879G    0.04274    0.02131          0         23        320: 100%|██████████| 28/28 [00:19<00:00,  1.45it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/2 [00:00<?, ?it/s]
+fitness [[    0.55142     0.61538     0.52586     0.24866    0.043212   0.0083825           0]]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:03<00:00,  1.57s/it]
+                   all         24         39      0.551      0.615      0.526      0.249
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+
+
+
+
+
+
+
+
+
+        9/9     0.879G    0.04135    0.02085          0         27        320: 100%|██████████| 28/28 [00:18<00:00,  1.48it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/2 [00:00<?, ?it/s]
+fitness [[    0.80411     0.61538     0.70078     0.39489    0.040988   0.0082344           0]]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 2/2 [00:03<00:00,  1.52s/it]
+                   all         24         39      0.804      0.615      0.701      0.395
+10 epochs completed in 0.077 hours.
+Optimizer stripped from runs\train\exp31\weights\last.pt, 14.3MB
+Optimizer stripped from runs\train\exp31\weights\best.pt, 14.3MB
+Validating runs\train\exp31\weights\best.pt...
+Fusing layers...
+Model summary: 157 layers, 7012822 parameters, 0 gradients, 15.8 GFLOPs
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  50%|█████     | 1/2 [00:02<00:02,  2.44s/it]
+                   all         24         39      0.804      0.615        0.7      0.396: 100%|██████████| 2/2 [00:03<00:00,  1.75s/it]

@@ -1,0 +1,1 @@
+{"box_data": [{"position": {"minX": 70.50064086914062, "minY": 146.0720672607422, "maxX": 524.9034423828125, "maxY": 388.871826171875}, "class_id": 0, "box_caption": "Wooden-Pallet 0.902", "scores": {"class_score": 0.901975154876709}, "domain": "pixel"}], "class_labels": {"0": "Wooden-Pallet"}}

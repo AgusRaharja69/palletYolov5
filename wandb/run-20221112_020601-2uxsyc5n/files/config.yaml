@@ -1,0 +1,36 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.5
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.4
+    start_time: 1668193561.163506
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 23
+      4: 3.7.4
+      5: 0.13.5
+      8:
+      - 3
+      - 5
+data_dict:
+  desc: null
+  value:
+    names:
+      '0': Wooden-Pallet
+    nc: 1
+    path: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet
+    test: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\test\images
+    train: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\train\images
+    val: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\valid\images

@@ -33,6 +33,11 @@ def dist_pinhole(xy,X,Y,im0_shape,confidence):
     D = 0
 
     if confidence > 0.4:
+        # print("xy: ",xy)
+        # print("X: ", X)
+        # print("Y: ", Y)
+        # print("imShape: ",im0_shape)
+        # print("====================================") 
         P = int(xy[2] - xy[0])
         CenterD = W * F / P  # center distance
         dA = np.array((X, Y))
@@ -47,25 +52,31 @@ def dist_pinhole(xy,X,Y,im0_shape,confidence):
 ''' Find distance using 2D LiDAR camera fusion with angle similiarity '''
 def dist_lidar(xy,X,Y,im0_shape,confidence):
     ''' Opening LiDAR data '''  
-    with open(jsonLidarPath, 'r') as j:
+    with open(jsonLidarPath) as f:
         try :
-            lidarData = json.loads(j.read())
-            # angle = lidarData['angle']
-            # lidarDist = lidarData['distance']
-            lidarAngle = [a[1] for a in lidarData['data']]
-            lidarDist = [b[2] for b in lidarData['data']]
-        except :
-            print("error")
-            lidarAngle, lidarDist = lidarAngle, lidarDist
+            lidar_data = json.load(f)
+        except:
+            lidar_data = {"data": [[0,0,0]]}
+
+    # LiDAR data
+    dataLidar = np.array(lidar_data['data'])
+    angleRawLidar = np.radians(dataLidar[:, 1]) # Convert angle to radians
+    rangeLidar = dataLidar[:, 2]
+    angleLidar = np.pi - angleRawLidar #mirror
     
     # Angle by camera
-    DoF = 55
+    FoV = 55
     dispPix = int(im0_shape)
-    angle = (DoF/dispPix)*X
-    angleDet = 360 - (150 + angle)
-    # Angle by detection
 
-    D = lidarDist
+    detectWidth = round(int(xy[2] - xy[0])/5)
+    AnglePix = [int(xy[0]),(int(xy[0])+detectWidth),(int(xy[2])-detectWidth),int(xy[2])]
+    angleCamDet = [x*(FoV/dispPix) for x in AnglePix]
+    angleCam = np.radians([90 + (FoV/2) - x for x in angleCamDet])
+
+    # Scan dist
+    angleArrayId = [angleLidar.index(x) for x in angleLidar if (x>=angleCam[0] and x<=angleCam[1]) or (x>=angleCam[2] and x<=angleCam[3])]
+    D = np.median([rangeLidar[x] for x in angleArrayId])    
+    # D = lidarDist
     return D
 
 def projection(X,Y):

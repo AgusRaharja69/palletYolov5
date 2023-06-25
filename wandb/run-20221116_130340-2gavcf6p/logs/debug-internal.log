@@ -1,0 +1,177 @@
+2022-11-16 13:03:40,664 INFO    StreamThr :6044 [internal.py:wandb_internal():91] W&B internal server running at pid: 6044, started at: 2022-11-16 13:03:40.662408
+2022-11-16 13:03:40,666 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: status
+2022-11-16 13:03:40,670 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: status
+2022-11-16 13:03:40,674 DEBUG   SenderThread:6044 [sender.py:send():303] send: header
+2022-11-16 13:03:40,674 INFO    WriterThread:6044 [datastore.py:open_for_write():75] open: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\run-2gavcf6p.wandb
+2022-11-16 13:03:40,717 DEBUG   SenderThread:6044 [sender.py:send():303] send: run
+2022-11-16 13:03:40,736 INFO    SenderThread:6044 [sender.py:_maybe_setup_resume():594] checking resume status for None/train/2gavcf6p
+2022-11-16 13:03:41,735 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: check_version
+2022-11-16 13:03:41,740 INFO    SenderThread:6044 [dir_watcher.py:__init__():216] watching files in: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files
+2022-11-16 13:03:41,740 INFO    SenderThread:6044 [sender.py:_start_run_threads():931] run started: 2gavcf6p with start time 1668578620.659415
+2022-11-16 13:03:41,740 DEBUG   SenderThread:6044 [sender.py:send():303] send: summary
+2022-11-16 13:03:41,741 INFO    SenderThread:6044 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 13:03:41,742 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: check_version
+2022-11-16 13:03:41,851 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: run_start
+2022-11-16 13:03:42,054 DEBUG   HandlerThread:6044 [system_info.py:__init__():31] System info init
+2022-11-16 13:03:42,054 DEBUG   HandlerThread:6044 [system_info.py:__init__():46] System info init done
+2022-11-16 13:03:42,054 INFO    HandlerThread:6044 [system_monitor.py:start():150] Starting system monitor
+2022-11-16 13:03:42,054 INFO    SystemMonitor:6044 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-16 13:03:42,054 INFO    HandlerThread:6044 [system_monitor.py:probe():168] Collecting system info
+2022-11-16 13:03:42,054 INFO    SystemMonitor:6044 [interfaces.py:start():168] Started cpu
+2022-11-16 13:03:42,054 INFO    SystemMonitor:6044 [interfaces.py:start():168] Started disk
+2022-11-16 13:03:42,054 INFO    SystemMonitor:6044 [interfaces.py:start():168] Started gpu
+2022-11-16 13:03:42,070 INFO    SystemMonitor:6044 [interfaces.py:start():168] Started memory
+2022-11-16 13:03:42,085 DEBUG   HandlerThread:6044 [system_info.py:probe():195] Probing system
+2022-11-16 13:03:42,085 DEBUG   HandlerThread:6044 [system_info.py:_probe_git():180] Probing git
+2022-11-16 13:03:42,117 INFO    SystemMonitor:6044 [interfaces.py:start():168] Started network
+2022-11-16 13:03:42,467 DEBUG   HandlerThread:6044 [system_info.py:_probe_git():188] Probing git done
+2022-11-16 13:03:42,467 DEBUG   HandlerThread:6044 [system_info.py:probe():241] Probing system done
+2022-11-16 13:03:42,467 DEBUG   HandlerThread:6044 [system_monitor.py:probe():177] {'os': 'Windows-10-10.0.19041-SP0', 'python': '3.7.4', 'heartbeatAt': '2022-11-16T06:03:42.085946', 'startedAt': '2022-11-16T06:03:40.645541', 'docker': None, 'cuda': None, 'args': ('--img', '640', '--batch', '16', '--epochs', '10', '--data', 'data.yaml', '--device', '0', '--weights', 'yolov5s.pt'), 'state': 'running', 'program': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/AgusRaharja69/palletYolov5.git', 'commit': '2b6e4d1388fec0d4c7e758671d6973165054f08f'}, 'email': 'raharja.wahyu.agus.kadek@gmail.com', 'root': 'D:/TESIS/THESIS 3/program/yolov5/yolov5_og/yolov5', 'host': 'DESKTOP-MMTU9NA', 'username': 'user', 'executable': 'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37\\python.exe', 'cpu_count': 2, 'cpu_count_logical': 4, 'cpu_freq': {'current': 2511.0, 'min': 0.0, 'max': 2712.0}, 'cpu_freq_per_core': [{'current': 2511.0, 'min': 0.0, 'max': 2712.0}], 'disk': {'total': 785.0253868103027, 'used': 542.5112228393555}, 'gpu': 'GeForce 940MX', 'gpu_count': 1, 'gpu_devices': [{'name': 'GeForce 940MX', 'memory_total': 2147483648}], 'memory': {'total': 7.8840789794921875}}
+2022-11-16 13:03:42,467 INFO    HandlerThread:6044 [system_monitor.py:probe():178] Finished collecting system info
+2022-11-16 13:03:42,467 INFO    HandlerThread:6044 [system_monitor.py:probe():181] Publishing system info
+2022-11-16 13:03:42,467 DEBUG   HandlerThread:6044 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2022-11-16 13:03:42,469 DEBUG   HandlerThread:6044 [system_info.py:_save_pip():67] Saving pip packages done
+2022-11-16 13:03:42,470 INFO    HandlerThread:6044 [system_monitor.py:probe():183] Finished publishing system info
+2022-11-16 13:03:42,546 DEBUG   SenderThread:6044 [sender.py:send():303] send: files
+2022-11-16 13:03:42,546 INFO    SenderThread:6044 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-16 13:03:42,589 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 13:03:42,590 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 13:03:42,755 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\wandb-summary.json
+2022-11-16 13:03:42,755 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\wandb-metadata.json
+2022-11-16 13:03:42,756 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\requirements.txt
+2022-11-16 13:03:42,888 DEBUG   SenderThread:6044 [sender.py:send():303] send: telemetry
+2022-11-16 13:03:42,888 DEBUG   SenderThread:6044 [sender.py:send():303] send: config
+2022-11-16 13:03:43,384 INFO    Thread-22 :6044 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpsne6idoxwandb\2miylmmr-wandb-metadata.json
+2022-11-16 13:03:43,762 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log
+2022-11-16 13:03:45,772 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log
+2022-11-16 13:03:47,791 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log
+2022-11-16 13:03:49,799 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log
+2022-11-16 13:03:55,819 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log
+2022-11-16 13:03:57,826 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log
+2022-11-16 13:03:57,908 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 13:03:57,908 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 13:04:11,942 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\config.yaml
+2022-11-16 13:04:12,674 DEBUG   SenderThread:6044 [sender.py:send():303] send: exit
+2022-11-16 13:04:12,674 INFO    SenderThread:6044 [sender.py:send_exit():442] handling exit code: 1
+2022-11-16 13:04:12,674 INFO    SenderThread:6044 [sender.py:send_exit():444] handling runtime: 30
+2022-11-16 13:04:12,677 INFO    SenderThread:6044 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 13:04:12,677 INFO    SenderThread:6044 [sender.py:send_exit():450] send defer
+2022-11-16 13:04:12,679 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:12,679 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 0
+2022-11-16 13:04:12,680 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:12,680 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-11-16 13:04:12,680 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 1
+2022-11-16 13:04:12,681 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:12,681 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 1
+2022-11-16 13:04:12,681 INFO    HandlerThread:6044 [system_monitor.py:finish():160] Stopping system monitor
+2022-11-16 13:04:12,682 DEBUG   SystemMonitor:6044 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-16 13:04:12,682 DEBUG   SystemMonitor:6044 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-11-16 13:04:12,682 DEBUG   SystemMonitor:6044 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-11-16 13:04:12,683 INFO    HandlerThread:6044 [interfaces.py:finish():173] Joined cpu
+2022-11-16 13:04:12,684 INFO    HandlerThread:6044 [interfaces.py:finish():173] Joined disk
+2022-11-16 13:04:12,710 INFO    HandlerThread:6044 [interfaces.py:finish():173] Joined gpu
+2022-11-16 13:04:12,711 INFO    HandlerThread:6044 [interfaces.py:finish():173] Joined memory
+2022-11-16 13:04:12,711 INFO    HandlerThread:6044 [interfaces.py:finish():173] Joined network
+2022-11-16 13:04:12,712 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:12,712 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-11-16 13:04:12,713 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 2
+2022-11-16 13:04:12,714 DEBUG   SenderThread:6044 [sender.py:send():303] send: stats
+2022-11-16 13:04:12,715 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:12,715 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 2
+2022-11-16 13:04:12,715 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:12,715 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-11-16 13:04:12,715 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 3
+2022-11-16 13:04:12,716 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:12,716 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 3
+2022-11-16 13:04:12,716 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:12,716 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-11-16 13:04:12,717 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 4
+2022-11-16 13:04:12,717 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:12,717 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 4
+2022-11-16 13:04:12,718 DEBUG   SenderThread:6044 [sender.py:send():303] send: summary
+2022-11-16 13:04:12,719 INFO    SenderThread:6044 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 13:04:12,720 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:12,720 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-11-16 13:04:12,720 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 5
+2022-11-16 13:04:12,721 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:12,721 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 5
+2022-11-16 13:04:12,721 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:12,721 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-11-16 13:04:12,721 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 6
+2022-11-16 13:04:12,722 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:12,722 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 6
+2022-11-16 13:04:12,722 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:12,722 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-11-16 13:04:12,956 INFO    Thread-17 :6044 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\wandb-summary.json
+2022-11-16 13:04:13,158 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 7
+2022-11-16 13:04:13,159 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:13,159 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 7
+2022-11-16 13:04:13,159 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:13,159 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-11-16 13:04:13,160 INFO    SenderThread:6044 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-16 13:04:13,732 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 13:04:13,991 INFO    SenderThread:6044 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log
+2022-11-16 13:04:13,992 INFO    SenderThread:6044 [dir_watcher.py:finish():392] scan: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files
+2022-11-16 13:04:13,992 INFO    SenderThread:6044 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\config.yaml config.yaml
+2022-11-16 13:04:13,993 INFO    SenderThread:6044 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log output.log
+2022-11-16 13:04:13,994 INFO    SenderThread:6044 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\requirements.txt requirements.txt
+2022-11-16 13:04:13,995 INFO    SenderThread:6044 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\wandb-metadata.json wandb-metadata.json
+2022-11-16 13:04:13,995 INFO    SenderThread:6044 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\wandb-summary.json wandb-summary.json
+2022-11-16 13:04:13,996 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 8
+2022-11-16 13:04:13,997 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 13:04:13,998 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:13,998 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 8
+2022-11-16 13:04:13,998 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:13,999 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-11-16 13:04:13,999 INFO    SenderThread:6044 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-16 13:04:14,798 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 13:04:14,798 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 13:04:14,932 INFO    Thread-29 :6044 [upload_job.py:push():143] Uploaded file D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\config.yaml
+2022-11-16 13:04:15,093 INFO    Thread-30 :6044 [upload_job.py:push():143] Uploaded file D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\output.log
+2022-11-16 13:04:15,352 INFO    Thread-32 :6044 [upload_job.py:push():143] Uploaded file D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\wandb-summary.json
+2022-11-16 13:04:16,090 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 13:04:16,091 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 13:04:17,108 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 13:04:17,108 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 13:04:17,201 INFO    Thread-31 :6044 [upload_job.py:push():143] Uploaded file D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\files\requirements.txt
+2022-11-16 13:04:17,415 INFO    Thread-16 :6044 [sender.py:transition_state():463] send defer: 9
+2022-11-16 13:04:17,415 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:17,415 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 9
+2022-11-16 13:04:17,415 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:17,415 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-11-16 13:04:17,415 INFO    SenderThread:6044 [file_pusher.py:join():173] waiting for file pusher
+2022-11-16 13:04:17,415 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 10
+2022-11-16 13:04:17,415 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:17,416 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 10
+2022-11-16 13:04:17,416 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:17,416 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-11-16 13:04:17,684 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 11
+2022-11-16 13:04:17,684 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:17,684 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 11
+2022-11-16 13:04:17,684 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:17,684 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-11-16 13:04:17,685 INFO    SenderThread:6044 [sender.py:transition_state():463] send defer: 12
+2022-11-16 13:04:17,685 DEBUG   SenderThread:6044 [sender.py:send():303] send: final
+2022-11-16 13:04:17,685 DEBUG   SenderThread:6044 [sender.py:send():303] send: footer
+2022-11-16 13:04:17,685 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 13:04:17,685 INFO    HandlerThread:6044 [handler.py:handle_request_defer():162] handle defer: 12
+2022-11-16 13:04:17,686 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: defer
+2022-11-16 13:04:17,686 INFO    SenderThread:6044 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-11-16 13:04:17,687 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 13:04:17,687 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 13:04:17,689 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 13:04:17,689 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 13:04:17,690 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: server_info
+2022-11-16 13:04:17,690 DEBUG   SenderThread:6044 [sender.py:send_request():317] send_request: server_info
+2022-11-16 13:04:17,692 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: get_summary
+2022-11-16 13:04:17,693 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: sampled_history
+2022-11-16 13:04:18,289 INFO    MainThread:6044 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-11-16 13:04:18,289 INFO    MainThread:6044 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-11-16 13:04:18,290 INFO    MainThread:6044 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-11-16 13:04:18,293 DEBUG   HandlerThread:6044 [handler.py:handle_request():139] handle_request: shutdown
+2022-11-16 13:04:18,293 INFO    HandlerThread:6044 [handler.py:finish():814] shutting down handler
+2022-11-16 13:04:18,691 INFO    WriterThread:6044 [datastore.py:close():279] close: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_130340-2gavcf6p\run-2gavcf6p.wandb
+2022-11-16 13:04:19,289 INFO    SenderThread:6044 [sender.py:finish():1331] shutting down sender
+2022-11-16 13:04:19,289 INFO    SenderThread:6044 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-16 13:04:19,289 INFO    SenderThread:6044 [file_pusher.py:join():173] waiting for file pusher
+2022-11-16 13:04:19,364 INFO    MainThread:6044 [internal.py:handle_exit():78] Internal process exited

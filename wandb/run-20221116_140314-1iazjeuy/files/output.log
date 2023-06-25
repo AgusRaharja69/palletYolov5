@@ -1,0 +1,62 @@
+Overriding model.yaml nc=80 with nc=1
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1     16182  models.yolo.Detect                      [1, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model summary: 214 layers, 7022326 parameters, 7022326 gradients, 15.9 GFLOPs
+Transferred 343/349 items from yolov5s.pt
+[34m[1mAMP: [39m[22mchecks passed
+[34m[1moptimizer:[39m[22m SGD(lr=0.01) with parameter groups 57 weight(decay=0.0), 60 weight(decay=0.0005), 60 bias
+[34m[1mtrain: [39m[22mScanning 'D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\train\labels' images and labels...222 found, 0 missing, 3 empty, 0 corrupt: 100%|██████████| 222/222 [00:11<00:00, 19.54it/s]
+[34m[1mtrain: [39m[22mWARNING  Cache directory D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\train is not writeable: [WinError 183] Cannot create a file when that file already exists: 'D:\\TESIS\\THESIS 3\\program\\yolov5\\yolov5_og\\yolov5\\datasets\\pallet\\train\\labels.cache.npy' -> 'D:\\TESIS\\THESIS 3\\program\\yolov5\\yolov5_og\\yolov5\\datasets\\pallet\\train\\labels.cache'
+[34m[1mval: [39m[22mScanning 'D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\valid\labels.cache' images and labels... 24 found, 0 missing, 0 empty, 0 corrupt: 100%|██████████| 24/24 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 630, in <module>
+    main(opt)
+  File "train.py", line 524, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "train.py", line 217, in train
+    prefix=colorstr('val: '))[0]
+  File "D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\utils\dataloaders.py", line 153, in create_dataloader
+    generator=generator), dataset
+  File "D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\utils\dataloaders.py", line 165, in __init__
+    self.iterator = super().__iter__()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\torch\utils\data\dataloader.py", line 359, in __iter__
+    return self._get_iterator()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\torch\utils\data\dataloader.py", line 305, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\torch\utils\data\dataloader.py", line 918, in __init__
+    w.start()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\context.py", line 322, in _Popen
+    return Popen(process_obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\popen_spawn_win32.py", line 89, in __init__
+    reduction.dump(process_obj, to_child)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+BrokenPipeError: [Errno 32] Broken pipe

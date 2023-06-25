@@ -1,0 +1,102 @@
+wandb: WARNING Calling wandb.login() after wandb.init() has no effect.
+[34m[1mtrain: [39m[22mweights=yolov5s.pt, cfg=, data=data.yaml, hyp=data\hyps\hyp.scratch-low.yaml, epochs=250, batch_size=16, imgsz=640, rect=False, resume=False, nosave=False, noval=False, noautoanchor=False, noplots=False, evolve=None, bucket=, cache=None, image_weights=False, device=, multi_scale=False, single_cls=False, optimizer=SGD, sync_bn=False, workers=8, project=runs\train, name=exp, exist_ok=False, quad=False, cos_lr=False, label_smoothing=0.0, patience=100, freeze=[0], save_period=-1, seed=0, local_rank=-1, entity=None, upload_dataset=False, bbox_interval=-1, artifact_alias=latest
+[34m[1mgithub: [39m[22m YOLOv5 is out of date by 2 commits. Use `git pull` or `git clone https://github.com/ultralytics/yolov5` to update.
+YOLOv5  2022-11-10 Python-3.7.4 torch-1.13.0+cpu CPU
+[34m[1mhyperparameters: [39m[22mlr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=0.05, cls=0.5, cls_pw=1.0, obj=1.0, obj_pw=1.0, iou_t=0.2, anchor_t=4.0, fl_gamma=0.0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.0, copy_paste=0.0
+[34m[1mClearML: [39m[22mrun 'pip install clearml' to automatically track, visualize and remotely train YOLOv5  in ClearML
+[34m[1mComet: [39m[22mrun 'pip install comet_ml' to automatically track and visualize YOLOv5  runs in Comet
+[34m[1mTensorBoard: [39m[22mStart with 'tensorboard --logdir runs\train', view at http://localhost:6006/
+Overriding model.yaml nc=80 with nc=1
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1     16182  models.yolo.Detect                      [1, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model summary: 214 layers, 7022326 parameters, 7022326 gradients, 15.9 GFLOPs
+Transferred 343/349 items from yolov5s.pt
+[34m[1moptimizer:[39m[22m SGD(lr=0.01) with parameter groups 57 weight(decay=0.0), 60 weight(decay=0.0005), 60 bias
+
+
+
+[34m[1mtrain: [39m[22mScanning 'D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\train\labels' images and labels...222 found, 0 missing, 3 empty, 0
+[34m[1mtrain: [39m[22mWARNING  Cache directory D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\train is not writeable: [WinError 183] Cannot create a file when that file already exists: 'D:\\TESIS\\THESIS 3\\program\\yolov5\\yolov5_og\\yolov5\\datasets\\pallet\\train\\labels.cache.npy' -> 'D:\\TESIS\\THESIS 3\\program\\yolov5\\yolov5_og\\yolov5\\datasets\\pallet\\train\\labels.cache'
+[34m[1mval: [39m[22mScanning 'D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\datasets\pallet\valid\labels.cache' images and labels... 24 found, 0 missing, 0 empt
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\popen_spawn_win32.py", line 89, in __init__
+    reduction.dump(process_obj, to_child)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+BrokenPipeError: [Errno 32] Broken pipe
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\wandb\sdk\lib\exit_hooks.py", line 53, in exc_handler
+    traceback.print_exception(exc_type, exc, tb)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\traceback.py", line 105, in print_exception
+    print(line, file=file, end="")
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\wandb\sdk\lib\redirect.py", line 640, in write
+    self._old_write(data)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\colorama\ansitowin32.py", line 190, in write_and_convert
+    self.write_plain_text(text, cursor, len(text))
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\colorama\ansitowin32.py", line 195, in write_plain_text
+    self.wrapped.write(text[start:end])
+KeyboardInterrupt
+Original exception was:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\popen_spawn_win32.py", line 89, in __init__
+    reduction.dump(process_obj, to_child)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+BrokenPipeError: [Errno 32] Broken pipe
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "train.py", line 633, in <module>
+    main(opt)
+  File "train.py", line 527, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "train.py", line 220, in train
+    prefix=colorstr('val: '))[0]
+  File "D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\utils\dataloaders.py", line 153, in create_dataloader
+    generator=generator), dataset
+  File "D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\utils\dataloaders.py", line 165, in __init__
+    self.iterator = super().__iter__()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\torch\utils\data\dataloader.py", line 435, in __iter__
+    return self._get_iterator()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\torch\utils\data\dataloader.py", line 381, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\torch\utils\data\dataloader.py", line 1034, in __init__
+    w.start()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\context.py", line 322, in _Popen
+    return Popen(process_obj)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\multiprocessing\popen_spawn_win32.py", line 89, in __init__
+    reduction.dump(process_obj, to_child)
+KeyboardInterrupt

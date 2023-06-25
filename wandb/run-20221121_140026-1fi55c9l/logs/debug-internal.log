@@ -1,0 +1,651 @@
+2022-11-21 14:00:26,446 INFO    StreamThr :9480 [internal.py:wandb_internal():91] W&B internal server running at pid: 9480, started at: 2022-11-21 14:00:26.442624
+2022-11-21 14:00:26,466 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: status
+2022-11-21 14:00:26,467 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: status
+2022-11-21 14:00:26,474 DEBUG   SenderThread:9480 [sender.py:send():303] send: header
+2022-11-21 14:00:26,474 INFO    WriterThread:9480 [datastore.py:open_for_write():75] open: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\run-1fi55c9l.wandb
+2022-11-21 14:00:26,523 DEBUG   SenderThread:9480 [sender.py:send():303] send: run
+2022-11-21 14:00:26,550 INFO    SenderThread:9480 [sender.py:_maybe_setup_resume():594] checking resume status for None/train/1fi55c9l
+2022-11-21 14:00:29,032 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: check_version
+2022-11-21 14:00:29,134 INFO    SenderThread:9480 [dir_watcher.py:__init__():216] watching files in: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files
+2022-11-21 14:00:29,135 INFO    SenderThread:9480 [sender.py:_start_run_threads():931] run started: 1fi55c9l with start time 1669014026.418688
+2022-11-21 14:00:29,136 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:00:29,138 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:00:29,139 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: check_version
+2022-11-21 14:00:29,913 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: run_start
+2022-11-21 14:00:30,182 DEBUG   HandlerThread:9480 [system_info.py:__init__():31] System info init
+2022-11-21 14:00:30,182 DEBUG   HandlerThread:9480 [system_info.py:__init__():46] System info init done
+2022-11-21 14:00:30,183 INFO    HandlerThread:9480 [system_monitor.py:start():150] Starting system monitor
+2022-11-21 14:00:30,189 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\wandb-summary.json
+2022-11-21 14:00:30,191 INFO    SystemMonitor:9480 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-21 14:00:30,191 INFO    HandlerThread:9480 [system_monitor.py:probe():168] Collecting system info
+2022-11-21 14:00:30,192 INFO    SystemMonitor:9480 [interfaces.py:start():168] Started cpu
+2022-11-21 14:00:30,197 INFO    SystemMonitor:9480 [interfaces.py:start():168] Started disk
+2022-11-21 14:00:30,199 INFO    SystemMonitor:9480 [interfaces.py:start():168] Started gpu
+2022-11-21 14:00:30,212 INFO    SystemMonitor:9480 [interfaces.py:start():168] Started memory
+2022-11-21 14:00:30,266 DEBUG   HandlerThread:9480 [system_info.py:probe():195] Probing system
+2022-11-21 14:00:30,267 INFO    SystemMonitor:9480 [interfaces.py:start():168] Started network
+2022-11-21 14:00:30,299 DEBUG   HandlerThread:9480 [system_info.py:_probe_git():180] Probing git
+2022-11-21 14:00:30,553 DEBUG   HandlerThread:9480 [system_info.py:_probe_git():188] Probing git done
+2022-11-21 14:00:30,554 DEBUG   HandlerThread:9480 [system_info.py:probe():241] Probing system done
+2022-11-21 14:00:30,554 DEBUG   HandlerThread:9480 [system_monitor.py:probe():177] {'os': 'Windows-10-10.0.19041-SP0', 'python': '3.7.4', 'heartbeatAt': '2022-11-21T07:00:30.266694', 'startedAt': '2022-11-21T07:00:26.388774', 'docker': None, 'cuda': None, 'args': ('--img', '320', '--batch', '8', '--epochs', '3', '--data', 'data.yaml', '--device', '0', '--weights', 'yolov5s.pt'), 'state': 'running', 'program': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/AgusRaharja69/palletYolov5.git', 'commit': '2b6e4d1388fec0d4c7e758671d6973165054f08f'}, 'email': 'raharja.wahyu.agus.kadek@gmail.com', 'root': 'D:/TESIS/THESIS 3/program/yolov5/yolov5_og/yolov5', 'host': 'DESKTOP-MMTU9NA', 'username': 'user', 'executable': 'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37\\python.exe', 'cpu_count': 2, 'cpu_count_logical': 4, 'cpu_freq': {'current': 2511.0, 'min': 0.0, 'max': 2712.0}, 'cpu_freq_per_core': [{'current': 2511.0, 'min': 0.0, 'max': 2712.0}], 'disk': {'total': 785.0253868103027, 'used': 544.0569534301758}, 'gpu': 'GeForce 940MX', 'gpu_count': 1, 'gpu_devices': [{'name': 'GeForce 940MX', 'memory_total': 2147483648}], 'memory': {'total': 7.8840789794921875}}
+2022-11-21 14:00:30,554 INFO    HandlerThread:9480 [system_monitor.py:probe():178] Finished collecting system info
+2022-11-21 14:00:30,554 INFO    HandlerThread:9480 [system_monitor.py:probe():181] Publishing system info
+2022-11-21 14:00:30,555 DEBUG   HandlerThread:9480 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2022-11-21 14:00:30,557 DEBUG   HandlerThread:9480 [system_info.py:_save_pip():67] Saving pip packages done
+2022-11-21 14:00:30,558 INFO    HandlerThread:9480 [system_monitor.py:probe():183] Finished publishing system info
+2022-11-21 14:00:30,743 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:00:30,744 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-21 14:00:30,792 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:00:30,793 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:00:31,231 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\requirements.txt
+2022-11-21 14:00:31,232 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\wandb-metadata.json
+2022-11-21 14:00:31,940 DEBUG   SenderThread:9480 [sender.py:send():303] send: telemetry
+2022-11-21 14:00:31,941 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:00:32,242 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:00:33,208 INFO    Thread-22 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1k6f84xj-wandb-metadata.json
+2022-11-21 14:00:34,859 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:00:44,399 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:00:46,961 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:00:46,961 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:00:48,516 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:00:58,797 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\config.yaml
+2022-11-21 14:01:02,275 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:01:02,275 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:01:22,286 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:01:22,286 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:01:30,307 DEBUG   SystemMonitor:9480 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-21 14:01:30,309 DEBUG   SenderThread:9480 [sender.py:send():303] send: stats
+2022-11-21 14:01:38,826 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:01:38,826 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:01:52,708 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:01:58,844 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:01:58,845 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:02:02,011 DEBUG   SenderThread:9480 [sender.py:send():303] send: stats
+2022-11-21 14:02:17,029 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:02:17,029 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:02:30,331 DEBUG   SenderThread:9480 [sender.py:send():303] send: stats
+2022-11-21 14:02:32,644 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:02:32,644 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:02:43,225 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:02:47,247 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:02:48,253 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:02:48,253 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:02:51,294 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:02:53,312 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:02:55,329 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:02:57,349 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:02:59,364 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:00,340 DEBUG   SenderThread:9480 [sender.py:send():303] send: stats
+2022-11-21 14:03:01,389 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:03,397 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:05,404 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:05,673 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:03:05,674 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:03:07,417 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:09,442 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:11,505 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:16,864 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:21,026 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:03:21,028 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:03:30,354 DEBUG   SenderThread:9480 [sender.py:send():303] send: stats
+2022-11-21 14:03:30,589 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:03:30,594 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:03:30,600 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:03:30,601 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:03:30,602 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:03:30,605 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:03:30,607 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:03:30,608 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:03:30,609 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:03:30,611 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:03:30,776 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:30,776 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\wandb-summary.json
+2022-11-21 14:03:31,318 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,318 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\Labels_0_0c33d1d28f2ceb9bb0e4.jpg with policy now
+2022-11-21 14:03:31,328 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,329 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\Labels_0_6521b0080b7888f708a8.jpg with policy now
+2022-11-21 14:03:31,398 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,398 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\Mosaics_0_2650d257f905706e63ad.jpg with policy now
+2022-11-21 14:03:31,430 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,431 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\Mosaics_0_e497539866556f1820ae.jpg with policy now
+2022-11-21 14:03:31,444 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,445 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\Mosaics_0_bce94c4cba44175d9a1d.jpg with policy now
+2022-11-21 14:03:31,492 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,493 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_cd951dcd4573d1d10b6d.png with policy now
+2022-11-21 14:03:31,496 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,496 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_20657a09ca51d0857604.boxes2D.json with policy now
+2022-11-21 14:03:31,505 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,516 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,516 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_e8bb3f7accab8a2e770e.png with policy now
+2022-11-21 14:03:31,524 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,525 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_376977100198c4565c0d.boxes2D.json with policy now
+2022-11-21 14:03:31,526 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,560 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,560 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_eac0ba6795e75b99fab9.png with policy now
+2022-11-21 14:03:31,564 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,564 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_a867b6c300a5b9830ef1.boxes2D.json with policy now
+2022-11-21 14:03:31,567 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,590 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,590 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_21dbd1c756b5cc5578da.png with policy now
+2022-11-21 14:03:31,595 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,595 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_0ada8d382a36d2e7ec9b.boxes2D.json with policy now
+2022-11-21 14:03:31,598 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,641 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,641 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_5f99e3e6b52940b6533b.png with policy now
+2022-11-21 14:03:31,645 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,645 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_e0331b8cb5d58778f6ac.boxes2D.json with policy now
+2022-11-21 14:03:31,650 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,696 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,696 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_40158166f9e5665336a8.png with policy now
+2022-11-21 14:03:31,705 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,715 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_ec85650690f0d4c2abb1.boxes2D.json with policy now
+2022-11-21 14:03:31,725 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,726 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,726 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_e5eca9ceb49c5c08746f.png with policy now
+2022-11-21 14:03:31,736 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,736 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_f2d28818b7f5045356b5.boxes2D.json with policy now
+2022-11-21 14:03:31,742 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,777 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,778 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_6b9ef9094fcf368b26b0.png with policy now
+2022-11-21 14:03:31,795 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,795 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_e5276315ae7f1cb3cae0.boxes2D.json with policy now
+2022-11-21 14:03:31,797 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,826 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,826 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_81289bef7c29c4633b64.png with policy now
+2022-11-21 14:03:31,830 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\Mosaics_0_2650d257f905706e63ad.jpg
+2022-11-21 14:03:31,831 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_21dbd1c756b5cc5578da.png
+2022-11-21 14:03:31,832 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_a867b6c300a5b9830ef1.boxes2D.json
+2022-11-21 14:03:31,832 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,832 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_d3e7ef4a4421c685677d.boxes2D.json with policy now
+2022-11-21 14:03:31,835 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_40158166f9e5665336a8.png
+2022-11-21 14:03:31,861 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,862 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,862 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_f65ad496818736634e29.png with policy now
+2022-11-21 14:03:31,870 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\Labels_0_6521b0080b7888f708a8.jpg
+2022-11-21 14:03:31,871 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_f2d28818b7f5045356b5.boxes2D.json
+2022-11-21 14:03:31,872 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_376977100198c4565c0d.boxes2D.json
+2022-11-21 14:03:31,873 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_eac0ba6795e75b99fab9.png
+2022-11-21 14:03:31,874 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_cd951dcd4573d1d10b6d.png
+2022-11-21 14:03:31,875 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_81289bef7c29c4633b64.png
+2022-11-21 14:03:31,878 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_6b9ef9094fcf368b26b0.png
+2022-11-21 14:03:31,883 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\Labels_0_0c33d1d28f2ceb9bb0e4.jpg
+2022-11-21 14:03:31,885 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,887 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_e5276315ae7f1cb3cae0.boxes2D.json
+2022-11-21 14:03:31,889 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_5493edb20b4f05c830e0.boxes2D.json with policy now
+2022-11-21 14:03:31,890 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_0ada8d382a36d2e7ec9b.boxes2D.json
+2022-11-21 14:03:31,891 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_e8bb3f7accab8a2e770e.png
+2022-11-21 14:03:31,892 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_d3e7ef4a4421c685677d.boxes2D.json
+2022-11-21 14:03:31,893 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_20657a09ca51d0857604.boxes2D.json
+2022-11-21 14:03:31,893 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_5f99e3e6b52940b6533b.png
+2022-11-21 14:03:31,894 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_ec85650690f0d4c2abb1.boxes2D.json
+2022-11-21 14:03:31,894 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\Mosaics_0_e497539866556f1820ae.jpg
+2022-11-21 14:03:31,896 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_e0331b8cb5d58778f6ac.boxes2D.json
+2022-11-21 14:03:31,897 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\Mosaics_0_bce94c4cba44175d9a1d.jpg
+2022-11-21 14:03:31,906 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_e5eca9ceb49c5c08746f.png
+2022-11-21 14:03:31,908 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media
+2022-11-21 14:03:31,917 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata
+2022-11-21 14:03:31,922 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,930 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D
+2022-11-21 14:03:31,932 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,934 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images
+2022-11-21 14:03:31,938 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_51528a79ff3b142df368.png with policy now
+2022-11-21 14:03:31,974 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,977 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_af8ba793847686c6929a.boxes2D.json with policy now
+2022-11-21 14:03:31,989 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:31,990 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,990 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_2991155017ddd23dcea1.png with policy now
+2022-11-21 14:03:31,991 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:31,991 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_fb1b7df3bd2e3c278d18.boxes2D.json with policy now
+2022-11-21 14:03:31,992 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:32,060 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:32,060 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_d9ecafd5bad1bd17a686.png with policy now
+2022-11-21 14:03:32,062 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:32,062 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_c65f914b4251cb7b0b8c.boxes2D.json with policy now
+2022-11-21 14:03:32,064 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:32,065 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:32,067 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_ed6dcbb05d629742dcbb.png with policy now
+2022-11-21 14:03:32,071 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:32,072 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_faba7437b4967cf6cf2d.boxes2D.json with policy now
+2022-11-21 14:03:32,084 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:32,134 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:32,134 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_8e6a446b433e075405f1.png with policy now
+2022-11-21 14:03:32,139 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:32,140 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_44ec4d6a5e9135fcc8dc.boxes2D.json with policy now
+2022-11-21 14:03:32,141 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:32,155 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:32,156 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_0_98e1d4c89dd529ba02e0.png with policy now
+2022-11-21 14:03:32,174 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:03:32,174 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_0_ce6e707dd249db97cd25.boxes2D.json with policy now
+2022-11-21 14:03:32,177 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:03:32,549 INFO    Thread-31 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2tdt79h7-media/images/Labels_0_0c33d1d28f2ceb9bb0e4.jpg
+2022-11-21 14:03:32,586 INFO    Thread-32 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\zqfm3olp-media/images/Labels_0_6521b0080b7888f708a8.jpg
+2022-11-21 14:03:32,660 INFO    Thread-33 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\fuwy6lpc-media/images/Mosaics_0_2650d257f905706e63ad.jpg
+2022-11-21 14:03:32,765 INFO    Thread-38 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\55vg5yfg-media/images/BoundingBoxDebugger_0_e8bb3f7accab8a2e770e.png
+2022-11-21 14:03:32,821 INFO    Thread-37 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\dlf85u62-media/metadata/boxes2D/BoundingBoxDebugger_0_20657a09ca51d0857604.boxes2D.json
+2022-11-21 14:03:32,881 INFO    Thread-34 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2ctn77xo-media/images/Mosaics_0_e497539866556f1820ae.jpg
+2022-11-21 14:03:32,882 INFO    Thread-39 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\285ne3du-media/metadata/boxes2D/BoundingBoxDebugger_0_376977100198c4565c0d.boxes2D.json
+2022-11-21 14:03:32,922 INFO    Thread-36 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2d43fjsy-media/images/BoundingBoxDebugger_0_cd951dcd4573d1d10b6d.png
+2022-11-21 14:03:32,926 INFO    Thread-35 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2dcfdso6-media/images/Mosaics_0_bce94c4cba44175d9a1d.jpg
+2022-11-21 14:03:32,935 INFO    Thread-41 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2wcbm16k-media/metadata/boxes2D/BoundingBoxDebugger_0_a867b6c300a5b9830ef1.boxes2D.json
+2022-11-21 14:03:32,982 INFO    Thread-42 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2gzx9qxv-media/images/BoundingBoxDebugger_0_21dbd1c756b5cc5578da.png
+2022-11-21 14:03:33,006 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:33,006 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_ce6e707dd249db97cd25.boxes2D.json
+2022-11-21 14:03:33,007 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_af8ba793847686c6929a.boxes2D.json
+2022-11-21 14:03:33,007 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_c65f914b4251cb7b0b8c.boxes2D.json
+2022-11-21 14:03:33,008 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_44ec4d6a5e9135fcc8dc.boxes2D.json
+2022-11-21 14:03:33,008 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_faba7437b4967cf6cf2d.boxes2D.json
+2022-11-21 14:03:33,009 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_f65ad496818736634e29.png
+2022-11-21 14:03:33,009 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_5493edb20b4f05c830e0.boxes2D.json
+2022-11-21 14:03:33,010 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_2991155017ddd23dcea1.png
+2022-11-21 14:03:33,010 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_51528a79ff3b142df368.png
+2022-11-21 14:03:33,011 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_0_fb1b7df3bd2e3c278d18.boxes2D.json
+2022-11-21 14:03:33,011 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_8e6a446b433e075405f1.png
+2022-11-21 14:03:33,012 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_d9ecafd5bad1bd17a686.png
+2022-11-21 14:03:33,012 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_ed6dcbb05d629742dcbb.png
+2022-11-21 14:03:33,013 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_0_98e1d4c89dd529ba02e0.png
+2022-11-21 14:03:33,013 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D
+2022-11-21 14:03:33,013 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images
+2022-11-21 14:03:33,084 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 14:03:33,094 DEBUG   SenderThread:9480 [sender.py:send():303] send: history
+2022-11-21 14:03:33,148 INFO    Thread-43 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\afdhd16c-media/metadata/boxes2D/BoundingBoxDebugger_0_0ada8d382a36d2e7ec9b.boxes2D.json
+2022-11-21 14:03:33,309 INFO    Thread-40 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\10btijd7-media/images/BoundingBoxDebugger_0_eac0ba6795e75b99fab9.png
+2022-11-21 14:03:33,390 INFO    Thread-45 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\kbq7fpgz-media/metadata/boxes2D/BoundingBoxDebugger_0_e0331b8cb5d58778f6ac.boxes2D.json
+2022-11-21 14:03:33,508 INFO    Thread-44 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1328fddu-media/images/BoundingBoxDebugger_0_5f99e3e6b52940b6533b.png
+2022-11-21 14:03:33,613 INFO    Thread-46 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\ntom5vte-media/images/BoundingBoxDebugger_0_40158166f9e5665336a8.png
+2022-11-21 14:03:33,625 INFO    Thread-47 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\33kx502b-media/metadata/boxes2D/BoundingBoxDebugger_0_ec85650690f0d4c2abb1.boxes2D.json
+2022-11-21 14:03:33,629 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:03:33,680 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:03:33,686 INFO    Thread-48 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1mbm5gtq-media/images/BoundingBoxDebugger_0_e5eca9ceb49c5c08746f.png
+2022-11-21 14:03:33,950 INFO    Thread-53 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2q02y8jm-media/metadata/boxes2D/BoundingBoxDebugger_0_d3e7ef4a4421c685677d.boxes2D.json
+2022-11-21 14:03:33,992 INFO    Thread-49 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\22tkys7b-media/metadata/boxes2D/BoundingBoxDebugger_0_f2d28818b7f5045356b5.boxes2D.json
+2022-11-21 14:03:34,033 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\wandb-summary.json
+2022-11-21 14:03:34,034 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\config.yaml
+2022-11-21 14:03:34,083 INFO    Thread-50 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1npqzbys-media/images/BoundingBoxDebugger_0_6b9ef9094fcf368b26b0.png
+2022-11-21 14:03:34,126 INFO    Thread-55 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1zh9bdik-media/metadata/boxes2D/BoundingBoxDebugger_0_5493edb20b4f05c830e0.boxes2D.json
+2022-11-21 14:03:34,200 INFO    Thread-54 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1cp2hipj-media/images/BoundingBoxDebugger_0_f65ad496818736634e29.png
+2022-11-21 14:03:34,269 INFO    Thread-52 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\zwb34464-media/images/BoundingBoxDebugger_0_81289bef7c29c4633b64.png
+2022-11-21 14:03:34,327 INFO    Thread-56 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1alr3dsj-media/images/BoundingBoxDebugger_0_51528a79ff3b142df368.png
+2022-11-21 14:03:34,351 INFO    Thread-51 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3f6sj1yt-media/metadata/boxes2D/BoundingBoxDebugger_0_e5276315ae7f1cb3cae0.boxes2D.json
+2022-11-21 14:03:34,390 INFO    Thread-59 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\14rmf463-media/metadata/boxes2D/BoundingBoxDebugger_0_fb1b7df3bd2e3c278d18.boxes2D.json
+2022-11-21 14:03:34,481 INFO    Thread-57 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3bfu0ooh-media/metadata/boxes2D/BoundingBoxDebugger_0_af8ba793847686c6929a.boxes2D.json
+2022-11-21 14:03:34,560 INFO    Thread-58 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\pfizmzfa-media/images/BoundingBoxDebugger_0_2991155017ddd23dcea1.png
+2022-11-21 14:03:34,772 INFO    Thread-62 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\h0caav7w-media/images/BoundingBoxDebugger_0_ed6dcbb05d629742dcbb.png
+2022-11-21 14:03:34,795 INFO    Thread-64 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3hs38qhm-media/images/BoundingBoxDebugger_0_8e6a446b433e075405f1.png
+2022-11-21 14:03:34,799 INFO    Thread-61 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\344sy4k7-media/metadata/boxes2D/BoundingBoxDebugger_0_c65f914b4251cb7b0b8c.boxes2D.json
+2022-11-21 14:03:34,974 INFO    Thread-60 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\25zbya7d-media/images/BoundingBoxDebugger_0_d9ecafd5bad1bd17a686.png
+2022-11-21 14:03:34,984 INFO    Thread-65 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\35f3c86n-media/metadata/boxes2D/BoundingBoxDebugger_0_44ec4d6a5e9135fcc8dc.boxes2D.json
+2022-11-21 14:03:34,984 INFO    Thread-63 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3jusklx5-media/metadata/boxes2D/BoundingBoxDebugger_0_faba7437b4967cf6cf2d.boxes2D.json
+2022-11-21 14:03:35,031 INFO    Thread-67 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\l3y00ccu-media/metadata/boxes2D/BoundingBoxDebugger_0_ce6e707dd249db97cd25.boxes2D.json
+2022-11-21 14:03:35,031 INFO    Thread-66 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\j96itq2v-media/images/BoundingBoxDebugger_0_98e1d4c89dd529ba02e0.png
+2022-11-21 14:03:36,680 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:03:36,680 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:03:37,158 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:39,358 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:41,426 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:43,466 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:45,555 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:47,685 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:49,727 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:51,760 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:52,130 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:03:52,130 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:03:53,783 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:55,810 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:57,876 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:03:58,896 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:00,375 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:00,379 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:00,380 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:00,381 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:00,383 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:00,385 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:00,388 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:00,391 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:00,392 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:00,394 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:00,395 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,395 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_cd951dcd4573d1d10b6d.png with policy now
+2022-11-21 14:04:00,397 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,398 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_bd0e393222e6717344b6.boxes2D.json with policy now
+2022-11-21 14:04:00,400 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,401 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,401 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_e8bb3f7accab8a2e770e.png with policy now
+2022-11-21 14:04:00,403 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,403 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_40bf6aa084c04787ef2b.boxes2D.json with policy now
+2022-11-21 14:04:00,405 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,406 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,407 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_eac0ba6795e75b99fab9.png with policy now
+2022-11-21 14:04:00,410 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,410 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_f7f76f87e1ec9418f69b.boxes2D.json with policy now
+2022-11-21 14:04:00,412 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,413 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,413 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_21dbd1c756b5cc5578da.png with policy now
+2022-11-21 14:04:00,422 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,422 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_982262b0f659621e37ff.boxes2D.json with policy now
+2022-11-21 14:04:00,424 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,425 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,425 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_5f99e3e6b52940b6533b.png with policy now
+2022-11-21 14:04:00,426 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,426 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_cf74929a285faeba2d60.boxes2D.json with policy now
+2022-11-21 14:04:00,427 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,428 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,428 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_40158166f9e5665336a8.png with policy now
+2022-11-21 14:04:00,429 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,429 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_926d47f1579c86129049.boxes2D.json with policy now
+2022-11-21 14:04:00,430 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,431 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,432 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_e5eca9ceb49c5c08746f.png with policy now
+2022-11-21 14:04:00,432 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,432 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_685f87777c42f13b660c.boxes2D.json with policy now
+2022-11-21 14:04:00,433 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,434 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,434 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_6b9ef9094fcf368b26b0.png with policy now
+2022-11-21 14:04:00,435 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,435 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_ade36488e0b50e52a1b4.boxes2D.json with policy now
+2022-11-21 14:04:00,436 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,437 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,438 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_81289bef7c29c4633b64.png with policy now
+2022-11-21 14:04:00,439 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,439 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_e8910e1ba05c32708efe.boxes2D.json with policy now
+2022-11-21 14:04:00,445 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,447 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,448 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_f65ad496818736634e29.png with policy now
+2022-11-21 14:04:00,451 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,452 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_25a0617e5ce946f2359a.boxes2D.json with policy now
+2022-11-21 14:04:00,454 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,455 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,455 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_51528a79ff3b142df368.png with policy now
+2022-11-21 14:04:00,456 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,457 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_45156ab660e4fa16a9cd.boxes2D.json with policy now
+2022-11-21 14:04:00,458 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,458 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,459 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_2991155017ddd23dcea1.png with policy now
+2022-11-21 14:04:00,465 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,465 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_8cb3ca8940ddaecdbf26.boxes2D.json with policy now
+2022-11-21 14:04:00,467 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,468 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,468 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_d9ecafd5bad1bd17a686.png with policy now
+2022-11-21 14:04:00,470 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,470 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_7f3f2e4540d9d23191bb.boxes2D.json with policy now
+2022-11-21 14:04:00,472 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,472 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,472 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_ed6dcbb05d629742dcbb.png with policy now
+2022-11-21 14:04:00,473 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,474 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_cdc459c258c5d6967c56.boxes2D.json with policy now
+2022-11-21 14:04:00,475 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,475 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,476 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_8e6a446b433e075405f1.png with policy now
+2022-11-21 14:04:00,476 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,477 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_b5a5b75932e67930b001.boxes2D.json with policy now
+2022-11-21 14:04:00,478 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,478 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,479 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_1_98e1d4c89dd529ba02e0.png with policy now
+2022-11-21 14:04:00,480 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:00,480 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_1_3a7effcc73ef206ebe73.boxes2D.json with policy now
+2022-11-21 14:04:00,481 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:00,481 DEBUG   SenderThread:9480 [sender.py:send():303] send: stats
+2022-11-21 14:04:00,628 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 14:04:00,630 DEBUG   SenderThread:9480 [sender.py:send():303] send: history
+2022-11-21 14:04:00,631 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:00,633 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:00,973 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:00,974 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\wandb-summary.json
+2022-11-21 14:04:00,985 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_8cb3ca8940ddaecdbf26.boxes2D.json
+2022-11-21 14:04:00,989 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_685f87777c42f13b660c.boxes2D.json
+2022-11-21 14:04:00,990 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_40158166f9e5665336a8.png
+2022-11-21 14:04:00,990 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_3a7effcc73ef206ebe73.boxes2D.json
+2022-11-21 14:04:00,991 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_98e1d4c89dd529ba02e0.png
+2022-11-21 14:04:00,991 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_6b9ef9094fcf368b26b0.png
+2022-11-21 14:04:00,992 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_25a0617e5ce946f2359a.boxes2D.json
+2022-11-21 14:04:00,992 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_e8910e1ba05c32708efe.boxes2D.json
+2022-11-21 14:04:00,993 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_cd951dcd4573d1d10b6d.png
+2022-11-21 14:04:00,993 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_b5a5b75932e67930b001.boxes2D.json
+2022-11-21 14:04:01,004 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_ade36488e0b50e52a1b4.boxes2D.json
+2022-11-21 14:04:01,007 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_ed6dcbb05d629742dcbb.png
+2022-11-21 14:04:01,015 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_40bf6aa084c04787ef2b.boxes2D.json
+2022-11-21 14:04:01,016 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_7f3f2e4540d9d23191bb.boxes2D.json
+2022-11-21 14:04:01,017 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_8e6a446b433e075405f1.png
+2022-11-21 14:04:01,018 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_cdc459c258c5d6967c56.boxes2D.json
+2022-11-21 14:04:01,019 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_81289bef7c29c4633b64.png
+2022-11-21 14:04:01,019 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_d9ecafd5bad1bd17a686.png
+2022-11-21 14:04:01,020 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_45156ab660e4fa16a9cd.boxes2D.json
+2022-11-21 14:04:01,020 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_f7f76f87e1ec9418f69b.boxes2D.json
+2022-11-21 14:04:01,021 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_cf74929a285faeba2d60.boxes2D.json
+2022-11-21 14:04:01,021 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_eac0ba6795e75b99fab9.png
+2022-11-21 14:04:01,022 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_21dbd1c756b5cc5578da.png
+2022-11-21 14:04:01,022 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_e8bb3f7accab8a2e770e.png
+2022-11-21 14:04:01,023 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_bd0e393222e6717344b6.boxes2D.json
+2022-11-21 14:04:01,023 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_51528a79ff3b142df368.png
+2022-11-21 14:04:01,024 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_5f99e3e6b52940b6533b.png
+2022-11-21 14:04:01,025 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_f65ad496818736634e29.png
+2022-11-21 14:04:01,025 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_926d47f1579c86129049.boxes2D.json
+2022-11-21 14:04:01,026 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_e5eca9ceb49c5c08746f.png
+2022-11-21 14:04:01,026 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_1_982262b0f659621e37ff.boxes2D.json
+2022-11-21 14:04:01,027 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_1_2991155017ddd23dcea1.png
+2022-11-21 14:04:01,028 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D
+2022-11-21 14:04:01,028 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images
+2022-11-21 14:04:01,561 INFO    Thread-71 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2lagl0pw-media/metadata/boxes2D/BoundingBoxDebugger_1_40bf6aa084c04787ef2b.boxes2D.json
+2022-11-21 14:04:01,597 INFO    Thread-69 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2ib03a5u-media/metadata/boxes2D/BoundingBoxDebugger_1_bd0e393222e6717344b6.boxes2D.json
+2022-11-21 14:04:01,618 INFO    Thread-73 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1ipovhm2-media/metadata/boxes2D/BoundingBoxDebugger_1_f7f76f87e1ec9418f69b.boxes2D.json
+2022-11-21 14:04:01,698 INFO    Thread-79 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\25bzxlee-media/metadata/boxes2D/BoundingBoxDebugger_1_926d47f1579c86129049.boxes2D.json
+2022-11-21 14:04:01,698 INFO    Thread-80 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\32y98qyo-media/images/BoundingBoxDebugger_1_e5eca9ceb49c5c08746f.png
+2022-11-21 14:04:01,701 INFO    Thread-68 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\q7a7bsd7-media/images/BoundingBoxDebugger_1_cd951dcd4573d1d10b6d.png
+2022-11-21 14:04:01,789 INFO    Thread-76 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\y1xwjdgg-media/images/BoundingBoxDebugger_1_5f99e3e6b52940b6533b.png
+2022-11-21 14:04:01,790 INFO    Thread-81 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1ot2oel5-media/metadata/boxes2D/BoundingBoxDebugger_1_685f87777c42f13b660c.boxes2D.json
+2022-11-21 14:04:01,817 INFO    Thread-83 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\js8i6avd-media/metadata/boxes2D/BoundingBoxDebugger_1_ade36488e0b50e52a1b4.boxes2D.json
+2022-11-21 14:04:01,838 INFO    Thread-77 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\244ivqrn-media/metadata/boxes2D/BoundingBoxDebugger_1_cf74929a285faeba2d60.boxes2D.json
+2022-11-21 14:04:01,866 INFO    Thread-75 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2q1tm174-media/metadata/boxes2D/BoundingBoxDebugger_1_982262b0f659621e37ff.boxes2D.json
+2022-11-21 14:04:01,951 INFO    Thread-74 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3bmftx9y-media/images/BoundingBoxDebugger_1_21dbd1c756b5cc5578da.png
+2022-11-21 14:04:01,955 INFO    Thread-70 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1rpb179d-media/images/BoundingBoxDebugger_1_e8bb3f7accab8a2e770e.png
+2022-11-21 14:04:01,961 INFO    Thread-87 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\15i2mdz8-media/metadata/boxes2D/BoundingBoxDebugger_1_25a0617e5ce946f2359a.boxes2D.json
+2022-11-21 14:04:02,023 INFO    Thread-72 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\zl2kmt9y-media/images/BoundingBoxDebugger_1_eac0ba6795e75b99fab9.png
+2022-11-21 14:04:02,024 INFO    Thread-85 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\26eyzfdn-media/metadata/boxes2D/BoundingBoxDebugger_1_e8910e1ba05c32708efe.boxes2D.json
+2022-11-21 14:04:02,025 INFO    Thread-82 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\w8rpleb6-media/images/BoundingBoxDebugger_1_6b9ef9094fcf368b26b0.png
+2022-11-21 14:04:02,058 INFO    Thread-89 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\k5mvevxs-media/metadata/boxes2D/BoundingBoxDebugger_1_45156ab660e4fa16a9cd.boxes2D.json
+2022-11-21 14:04:02,135 INFO    Thread-78 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2ge97i8x-media/images/BoundingBoxDebugger_1_40158166f9e5665336a8.png
+2022-11-21 14:04:02,146 INFO    Thread-86 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\37qk4ewz-media/images/BoundingBoxDebugger_1_f65ad496818736634e29.png
+2022-11-21 14:04:02,207 INFO    Thread-84 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\pblpveet-media/images/BoundingBoxDebugger_1_81289bef7c29c4633b64.png
+2022-11-21 14:04:02,294 INFO    Thread-88 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\21rkgfr5-media/images/BoundingBoxDebugger_1_51528a79ff3b142df368.png
+2022-11-21 14:04:02,414 INFO    Thread-95 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\19sr3aih-media/metadata/boxes2D/BoundingBoxDebugger_1_cdc459c258c5d6967c56.boxes2D.json
+2022-11-21 14:04:02,441 INFO    Thread-90 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1w8zxht9-media/images/BoundingBoxDebugger_1_2991155017ddd23dcea1.png
+2022-11-21 14:04:02,523 INFO    Thread-91 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\36pwtd1y-media/metadata/boxes2D/BoundingBoxDebugger_1_8cb3ca8940ddaecdbf26.boxes2D.json
+2022-11-21 14:04:02,534 INFO    Thread-92 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\df5oa2rz-media/images/BoundingBoxDebugger_1_d9ecafd5bad1bd17a686.png
+2022-11-21 14:04:02,549 INFO    Thread-93 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\dcaiuzoc-media/metadata/boxes2D/BoundingBoxDebugger_1_7f3f2e4540d9d23191bb.boxes2D.json
+2022-11-21 14:04:02,648 INFO    Thread-98 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\119acy7b-media/images/BoundingBoxDebugger_1_98e1d4c89dd529ba02e0.png
+2022-11-21 14:04:02,651 INFO    Thread-96 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\25p8skxj-media/images/BoundingBoxDebugger_1_8e6a446b433e075405f1.png
+2022-11-21 14:04:02,747 INFO    Thread-94 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1kjxfaxa-media/images/BoundingBoxDebugger_1_ed6dcbb05d629742dcbb.png
+2022-11-21 14:04:02,747 INFO    Thread-97 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1me5ctpg-media/metadata/boxes2D/BoundingBoxDebugger_1_b5a5b75932e67930b001.boxes2D.json
+2022-11-21 14:04:05,165 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:05,165 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\config.yaml
+2022-11-21 14:04:07,170 INFO    Thread-99 :9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3n5g530x-media/metadata/boxes2D/BoundingBoxDebugger_1_3a7effcc73ef206ebe73.boxes2D.json
+2022-11-21 14:04:07,214 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:07,459 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:04:07,459 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:04:09,282 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:11,316 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:13,416 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:15,592 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:17,676 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:19,980 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:22,165 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:22,817 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:04:22,817 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:04:24,209 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:26,259 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:27,863 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:27,867 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:27,868 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:27,874 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:27,876 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:27,878 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:27,879 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:27,881 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:27,881 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:27,883 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:27,892 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,893 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_cd951dcd4573d1d10b6d.png with policy now
+2022-11-21 14:04:27,896 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,896 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_7ab88b310677bfdd51e0.boxes2D.json with policy now
+2022-11-21 14:04:27,897 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:27,929 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,929 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_e8bb3f7accab8a2e770e.png with policy now
+2022-11-21 14:04:27,932 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,933 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_c2fdbc626b341fd2c11b.boxes2D.json with policy now
+2022-11-21 14:04:27,938 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:27,966 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,966 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_eac0ba6795e75b99fab9.png with policy now
+2022-11-21 14:04:27,967 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,967 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_09ab7de1f24f4e34e9e7.boxes2D.json with policy now
+2022-11-21 14:04:27,968 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:27,974 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,975 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_21dbd1c756b5cc5578da.png with policy now
+2022-11-21 14:04:27,980 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,980 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_e27be027826028fd8ded.boxes2D.json with policy now
+2022-11-21 14:04:27,982 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:27,999 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:27,999 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_5f99e3e6b52940b6533b.png with policy now
+2022-11-21 14:04:28,001 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,001 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_c96cb6e99fa2336296e5.boxes2D.json with policy now
+2022-11-21 14:04:28,006 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,029 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,030 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_40158166f9e5665336a8.png with policy now
+2022-11-21 14:04:28,046 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,046 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_3ec6b3dabfd6f1664a7e.boxes2D.json with policy now
+2022-11-21 14:04:28,048 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,049 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,049 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_e5eca9ceb49c5c08746f.png with policy now
+2022-11-21 14:04:28,062 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,062 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_6051b46622300ebd36d2.boxes2D.json with policy now
+2022-11-21 14:04:28,064 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,102 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,102 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_6b9ef9094fcf368b26b0.png with policy now
+2022-11-21 14:04:28,117 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,118 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_2ff3d0aee13659d9f26b.boxes2D.json with policy now
+2022-11-21 14:04:28,121 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,129 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,130 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_81289bef7c29c4633b64.png with policy now
+2022-11-21 14:04:28,134 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,135 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_8e513cc51d3633e3cf14.boxes2D.json with policy now
+2022-11-21 14:04:28,139 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,160 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,161 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_f65ad496818736634e29.png with policy now
+2022-11-21 14:04:28,186 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,186 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_6a4c7ba6d3bc18f7b891.boxes2D.json with policy now
+2022-11-21 14:04:28,191 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,205 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,207 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_51528a79ff3b142df368.png with policy now
+2022-11-21 14:04:28,213 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,213 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_ac83582e0789b6117173.boxes2D.json with policy now
+2022-11-21 14:04:28,214 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,218 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,218 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_2991155017ddd23dcea1.png with policy now
+2022-11-21 14:04:28,235 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,236 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_cde2347aade7fc8d8113.boxes2D.json with policy now
+2022-11-21 14:04:28,239 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,262 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,262 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_d9ecafd5bad1bd17a686.png with policy now
+2022-11-21 14:04:28,266 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,267 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_31e941a799a223220504.boxes2D.json with policy now
+2022-11-21 14:04:28,272 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,305 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,305 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_ed6dcbb05d629742dcbb.png with policy now
+2022-11-21 14:04:28,310 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,311 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_ff5485d0b6687ffd31ad.boxes2D.json with policy now
+2022-11-21 14:04:28,315 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,316 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,316 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_8e6a446b433e075405f1.png with policy now
+2022-11-21 14:04:28,318 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,318 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_b99dfe596594c4fc043c.boxes2D.json with policy now
+2022-11-21 14:04:28,321 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,330 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,330 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\images\BoundingBoxDebugger_2_98e1d4c89dd529ba02e0.png with policy now
+2022-11-21 14:04:28,334 DEBUG   SenderThread:9480 [sender.py:send():303] send: files
+2022-11-21 14:04:28,335 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\wandb-summary.json
+2022-11-21 14:04:28,335 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file media\metadata\boxes2D\BoundingBoxDebugger_2_15981af0f36d50c5d328.boxes2D.json with policy now
+2022-11-21 14:04:28,338 DEBUG   SenderThread:9480 [sender.py:send():303] send: config
+2022-11-21 14:04:28,335 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_51528a79ff3b142df368.png
+2022-11-21 14:04:28,339 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_b99dfe596594c4fc043c.boxes2D.json
+2022-11-21 14:04:28,340 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_3ec6b3dabfd6f1664a7e.boxes2D.json
+2022-11-21 14:04:28,340 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_09ab7de1f24f4e34e9e7.boxes2D.json
+2022-11-21 14:04:28,341 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_eac0ba6795e75b99fab9.png
+2022-11-21 14:04:28,341 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_81289bef7c29c4633b64.png
+2022-11-21 14:04:28,341 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_5f99e3e6b52940b6533b.png
+2022-11-21 14:04:28,342 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_cd951dcd4573d1d10b6d.png
+2022-11-21 14:04:28,343 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_21dbd1c756b5cc5578da.png
+2022-11-21 14:04:28,343 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_c2fdbc626b341fd2c11b.boxes2D.json
+2022-11-21 14:04:28,343 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_31e941a799a223220504.boxes2D.json
+2022-11-21 14:04:28,344 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_40158166f9e5665336a8.png
+2022-11-21 14:04:28,344 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_f65ad496818736634e29.png
+2022-11-21 14:04:28,345 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_8e513cc51d3633e3cf14.boxes2D.json
+2022-11-21 14:04:28,348 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_ff5485d0b6687ffd31ad.boxes2D.json
+2022-11-21 14:04:28,349 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_e8bb3f7accab8a2e770e.png
+2022-11-21 14:04:28,349 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_6a4c7ba6d3bc18f7b891.boxes2D.json
+2022-11-21 14:04:28,350 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_6051b46622300ebd36d2.boxes2D.json
+2022-11-21 14:04:28,350 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_d9ecafd5bad1bd17a686.png
+2022-11-21 14:04:28,350 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_6b9ef9094fcf368b26b0.png
+2022-11-21 14:04:28,351 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_cde2347aade7fc8d8113.boxes2D.json
+2022-11-21 14:04:28,351 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_e5eca9ceb49c5c08746f.png
+2022-11-21 14:04:28,352 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_ed6dcbb05d629742dcbb.png
+2022-11-21 14:04:28,352 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_ac83582e0789b6117173.boxes2D.json
+2022-11-21 14:04:28,353 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_e27be027826028fd8ded.boxes2D.json
+2022-11-21 14:04:28,354 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_2ff3d0aee13659d9f26b.boxes2D.json
+2022-11-21 14:04:28,355 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_2991155017ddd23dcea1.png
+2022-11-21 14:04:28,355 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_8e6a446b433e075405f1.png
+2022-11-21 14:04:28,356 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_c96cb6e99fa2336296e5.boxes2D.json
+2022-11-21 14:04:28,356 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_98e1d4c89dd529ba02e0.png
+2022-11-21 14:04:28,357 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_7ab88b310677bfdd51e0.boxes2D.json
+2022-11-21 14:04:28,357 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D
+2022-11-21 14:04:28,357 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images
+2022-11-21 14:04:28,819 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-21 14:04:28,823 DEBUG   SenderThread:9480 [sender.py:send():303] send: history
+2022-11-21 14:04:28,824 DEBUG   SenderThread:9480 [sender.py:send():303] send: summary
+2022-11-21 14:04:28,826 INFO    SenderThread:9480 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 14:04:28,943 INFO    Thread-103:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2dmu7jw6-media/metadata/boxes2D/BoundingBoxDebugger_2_c2fdbc626b341fd2c11b.boxes2D.json
+2022-11-21 14:04:28,947 INFO    Thread-102:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3mx8b4fo-media/images/BoundingBoxDebugger_2_e8bb3f7accab8a2e770e.png
+2022-11-21 14:04:28,984 INFO    Thread-100:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\160yvfde-media/images/BoundingBoxDebugger_2_cd951dcd4573d1d10b6d.png
+2022-11-21 14:04:29,135 INFO    Thread-105:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\mf2gf8rk-media/metadata/boxes2D/BoundingBoxDebugger_2_09ab7de1f24f4e34e9e7.boxes2D.json
+2022-11-21 14:04:29,181 INFO    Thread-104:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3rjt5mpr-media/images/BoundingBoxDebugger_2_eac0ba6795e75b99fab9.png
+2022-11-21 14:04:29,235 INFO    Thread-101:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1tk0utug-media/metadata/boxes2D/BoundingBoxDebugger_2_7ab88b310677bfdd51e0.boxes2D.json
+2022-11-21 14:04:29,235 INFO    Thread-106:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1argxlos-media/images/BoundingBoxDebugger_2_21dbd1c756b5cc5578da.png
+2022-11-21 14:04:29,417 INFO    Thread-107:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\6vontmg1-media/metadata/boxes2D/BoundingBoxDebugger_2_e27be027826028fd8ded.boxes2D.json
+2022-11-21 14:04:29,440 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:29,441 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\wandb-summary.json
+2022-11-21 14:04:29,441 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\images\BoundingBoxDebugger_2_98e1d4c89dd529ba02e0.png
+2022-11-21 14:04:29,442 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D\BoundingBoxDebugger_2_15981af0f36d50c5d328.boxes2D.json
+2022-11-21 14:04:29,442 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\media\metadata\boxes2D
+2022-11-21 14:04:29,558 INFO    Thread-110:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1hf5pmbe-media/images/BoundingBoxDebugger_2_40158166f9e5665336a8.png
+2022-11-21 14:04:29,576 INFO    Thread-108:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\33flacku-media/images/BoundingBoxDebugger_2_5f99e3e6b52940b6533b.png
+2022-11-21 14:04:29,638 INFO    Thread-113:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3n92dkw5-media/metadata/boxes2D/BoundingBoxDebugger_2_6051b46622300ebd36d2.boxes2D.json
+2022-11-21 14:04:29,691 INFO    Thread-114:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2ohio6vp-media/images/BoundingBoxDebugger_2_6b9ef9094fcf368b26b0.png
+2022-11-21 14:04:29,797 INFO    Thread-115:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\15rboa8a-media/metadata/boxes2D/BoundingBoxDebugger_2_2ff3d0aee13659d9f26b.boxes2D.json
+2022-11-21 14:04:29,868 INFO    Thread-111:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3lzzqic4-media/metadata/boxes2D/BoundingBoxDebugger_2_3ec6b3dabfd6f1664a7e.boxes2D.json
+2022-11-21 14:04:29,881 INFO    Thread-109:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\16u9n2kb-media/metadata/boxes2D/BoundingBoxDebugger_2_c96cb6e99fa2336296e5.boxes2D.json
+2022-11-21 14:04:29,938 INFO    Thread-112:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2sdcwrog-media/images/BoundingBoxDebugger_2_e5eca9ceb49c5c08746f.png
+2022-11-21 14:04:29,945 INFO    Thread-116:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2gb3c2gu-media/images/BoundingBoxDebugger_2_81289bef7c29c4633b64.png
+2022-11-21 14:04:30,003 INFO    Thread-117:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\qcerbdqh-media/metadata/boxes2D/BoundingBoxDebugger_2_8e513cc51d3633e3cf14.boxes2D.json
+2022-11-21 14:04:30,128 INFO    Thread-119:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1991rgyt-media/metadata/boxes2D/BoundingBoxDebugger_2_6a4c7ba6d3bc18f7b891.boxes2D.json
+2022-11-21 14:04:30,176 INFO    Thread-121:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3ate9uxl-media/metadata/boxes2D/BoundingBoxDebugger_2_ac83582e0789b6117173.boxes2D.json
+2022-11-21 14:04:30,189 INFO    Thread-120:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\yx7eyz9q-media/images/BoundingBoxDebugger_2_51528a79ff3b142df368.png
+2022-11-21 14:04:30,286 INFO    Thread-123:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2mhbcoqd-media/metadata/boxes2D/BoundingBoxDebugger_2_cde2347aade7fc8d8113.boxes2D.json
+2022-11-21 14:04:30,328 INFO    Thread-122:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2qnzt8y3-media/images/BoundingBoxDebugger_2_2991155017ddd23dcea1.png
+2022-11-21 14:04:30,391 DEBUG   SenderThread:9480 [sender.py:send():303] send: stats
+2022-11-21 14:04:30,406 INFO    Thread-125:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\216wxep4-media/metadata/boxes2D/BoundingBoxDebugger_2_31e941a799a223220504.boxes2D.json
+2022-11-21 14:04:30,490 INFO    Thread-124:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2xkrwyo3-media/images/BoundingBoxDebugger_2_d9ecafd5bad1bd17a686.png
+2022-11-21 14:04:30,639 INFO    Thread-118:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1cg3h2wg-media/images/BoundingBoxDebugger_2_f65ad496818736634e29.png
+2022-11-21 14:04:30,687 INFO    Thread-129:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\336z94wr-media/metadata/boxes2D/BoundingBoxDebugger_2_b99dfe596594c4fc043c.boxes2D.json
+2022-11-21 14:04:30,694 INFO    Thread-126:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3uk4mbq0-media/images/BoundingBoxDebugger_2_ed6dcbb05d629742dcbb.png
+2022-11-21 14:04:30,752 INFO    Thread-128:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\2m6bsox9-media/images/BoundingBoxDebugger_2_8e6a446b433e075405f1.png
+2022-11-21 14:04:30,891 INFO    Thread-130:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\13ek2zkh-media/images/BoundingBoxDebugger_2_98e1d4c89dd529ba02e0.png
+2022-11-21 14:04:30,958 INFO    Thread-131:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\3an2j7ck-media/metadata/boxes2D/BoundingBoxDebugger_2_15981af0f36d50c5d328.boxes2D.json
+2022-11-21 14:04:30,980 INFO    Thread-127:9480 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpmycxdnznwandb\1w9q3vd8-media/metadata/boxes2D/BoundingBoxDebugger_2_ff5485d0b6687ffd31ad.boxes2D.json
+2022-11-21 14:04:31,448 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:33,459 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:35,481 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:37,510 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:37,510 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\config.yaml
+2022-11-21 14:04:38,227 DEBUG   HandlerThread:9480 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-21 14:04:38,227 DEBUG   SenderThread:9480 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 14:04:39,551 INFO    Thread-17 :9480 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221121_140026-1fi55c9l\files\output.log
+2022-11-21 14:04:40,380 INFO    MainThread:9480 [internal.py:handle_exit():78] Internal process exited
+2022-11-21 14:04:40,381 WARNING MsgRouterThr:9480 [router.py:message_loop():74] EOFError seen in message_loop
+2022-11-21 14:04:40,408 INFO    SenderThread:9480 [sender.py:finish():1331] shutting down sender

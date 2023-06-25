@@ -1,0 +1,183 @@
+2022-11-16 12:43:53,582 INFO    StreamThr :13092 [internal.py:wandb_internal():91] W&B internal server running at pid: 13092, started at: 2022-11-16 12:43:53.581229
+2022-11-16 12:43:53,584 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: status
+2022-11-16 12:43:53,590 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: status
+2022-11-16 12:43:53,592 DEBUG   SenderThread:13092 [sender.py:send():303] send: header
+2022-11-16 12:43:53,592 INFO    WriterThread:13092 [datastore.py:open_for_write():75] open: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\run-re1f7nos.wandb
+2022-11-16 12:43:53,641 DEBUG   SenderThread:13092 [sender.py:send():303] send: run
+2022-11-16 12:43:53,654 INFO    SenderThread:13092 [sender.py:_maybe_setup_resume():594] checking resume status for None/train/re1f7nos
+2022-11-16 12:43:54,679 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: check_version
+2022-11-16 12:43:54,714 INFO    SenderThread:13092 [dir_watcher.py:__init__():216] watching files in: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files
+2022-11-16 12:43:54,715 INFO    SenderThread:13092 [sender.py:_start_run_threads():931] run started: re1f7nos with start time 1668577433.578238
+2022-11-16 12:43:54,715 DEBUG   SenderThread:13092 [sender.py:send():303] send: summary
+2022-11-16 12:43:54,716 INFO    SenderThread:13092 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 12:43:54,716 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: check_version
+2022-11-16 12:43:54,887 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: run_start
+2022-11-16 12:43:55,223 DEBUG   HandlerThread:13092 [system_info.py:__init__():31] System info init
+2022-11-16 12:43:55,223 DEBUG   HandlerThread:13092 [system_info.py:__init__():46] System info init done
+2022-11-16 12:43:55,223 INFO    HandlerThread:13092 [system_monitor.py:start():150] Starting system monitor
+2022-11-16 12:43:55,225 INFO    SystemMonitor:13092 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-16 12:43:55,225 INFO    HandlerThread:13092 [system_monitor.py:probe():168] Collecting system info
+2022-11-16 12:43:55,226 INFO    SystemMonitor:13092 [interfaces.py:start():168] Started cpu
+2022-11-16 12:43:55,229 INFO    SystemMonitor:13092 [interfaces.py:start():168] Started disk
+2022-11-16 12:43:55,230 INFO    SystemMonitor:13092 [interfaces.py:start():168] Started gpu
+2022-11-16 12:43:55,244 INFO    SystemMonitor:13092 [interfaces.py:start():168] Started memory
+2022-11-16 12:43:55,266 DEBUG   HandlerThread:13092 [system_info.py:probe():195] Probing system
+2022-11-16 12:43:55,267 DEBUG   HandlerThread:13092 [system_info.py:_probe_git():180] Probing git
+2022-11-16 12:43:55,329 INFO    SystemMonitor:13092 [interfaces.py:start():168] Started network
+2022-11-16 12:43:55,537 DEBUG   HandlerThread:13092 [system_info.py:_probe_git():188] Probing git done
+2022-11-16 12:43:55,537 DEBUG   HandlerThread:13092 [system_info.py:probe():241] Probing system done
+2022-11-16 12:43:55,538 DEBUG   HandlerThread:13092 [system_monitor.py:probe():177] {'os': 'Windows-10-10.0.19041-SP0', 'python': '3.7.4', 'heartbeatAt': '2022-11-16T05:43:55.266614', 'startedAt': '2022-11-16T05:43:53.565263', 'docker': None, 'cuda': None, 'args': ('--img', '640', '--batch', '16', '--epochs', '3', '--data', 'data.yaml', '--weights', 'yolov5s.pt'), 'state': 'running', 'program': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/AgusRaharja69/palletYolov5.git', 'commit': '2b6e4d1388fec0d4c7e758671d6973165054f08f'}, 'email': 'raharja.wahyu.agus.kadek@gmail.com', 'root': 'D:/TESIS/THESIS 3/program/yolov5/yolov5_og/yolov5', 'host': 'DESKTOP-MMTU9NA', 'username': 'user', 'executable': 'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37\\python.exe', 'cpu_count': 2, 'cpu_count_logical': 4, 'cpu_freq': {'current': 2511.0, 'min': 0.0, 'max': 2712.0}, 'cpu_freq_per_core': [{'current': 2511.0, 'min': 0.0, 'max': 2712.0}], 'disk': {'total': 785.0253868103027, 'used': 542.5111541748047}, 'gpu': 'GeForce 940MX', 'gpu_count': 1, 'gpu_devices': [{'name': 'GeForce 940MX', 'memory_total': 2147483648}], 'memory': {'total': 7.8840789794921875}}
+2022-11-16 12:43:55,538 INFO    HandlerThread:13092 [system_monitor.py:probe():178] Finished collecting system info
+2022-11-16 12:43:55,538 INFO    HandlerThread:13092 [system_monitor.py:probe():181] Publishing system info
+2022-11-16 12:43:55,538 DEBUG   HandlerThread:13092 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2022-11-16 12:43:55,539 DEBUG   HandlerThread:13092 [system_info.py:_save_pip():67] Saving pip packages done
+2022-11-16 12:43:55,573 INFO    HandlerThread:13092 [system_monitor.py:probe():183] Finished publishing system info
+2022-11-16 12:43:55,688 DEBUG   SenderThread:13092 [sender.py:send():303] send: files
+2022-11-16 12:43:55,688 INFO    SenderThread:13092 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-16 12:43:55,745 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\wandb-metadata.json
+2022-11-16 12:43:55,745 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\requirements.txt
+2022-11-16 12:43:55,747 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\wandb-summary.json
+2022-11-16 12:43:55,818 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 12:43:55,820 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 12:43:56,135 DEBUG   SenderThread:13092 [sender.py:send():303] send: telemetry
+2022-11-16 12:43:56,136 DEBUG   SenderThread:13092 [sender.py:send():303] send: config
+2022-11-16 12:43:56,597 INFO    Thread-22 :13092 [upload_job.py:push():143] Uploaded file C:\Users\user\AppData\Local\Temp\tmpetulq93xwandb\19q8yh49-wandb-metadata.json
+2022-11-16 12:43:56,758 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_created():275] file/dir created: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:43:58,798 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:44:02,844 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:44:04,882 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:44:11,155 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 12:44:11,155 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 12:44:14,979 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:44:17,001 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:44:25,107 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\config.yaml
+2022-11-16 12:44:26,763 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 12:44:26,799 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 12:44:42,258 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 12:44:42,260 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 12:44:45,015 DEBUG   SenderThread:13092 [sender.py:send():303] send: exit
+2022-11-16 12:44:45,016 INFO    SenderThread:13092 [sender.py:send_exit():442] handling exit code: 1
+2022-11-16 12:44:45,020 INFO    SenderThread:13092 [sender.py:send_exit():444] handling runtime: 50
+2022-11-16 12:44:45,025 INFO    SenderThread:13092 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 12:44:45,072 INFO    SenderThread:13092 [sender.py:send_exit():450] send defer
+2022-11-16 12:44:45,076 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:45,078 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 0
+2022-11-16 12:44:45,097 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:45,099 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-11-16 12:44:45,114 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 1
+2022-11-16 12:44:45,167 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:45,169 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 1
+2022-11-16 12:44:45,170 INFO    HandlerThread:13092 [system_monitor.py:finish():160] Stopping system monitor
+2022-11-16 12:44:45,249 DEBUG   SystemMonitor:13092 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-16 12:44:45,371 DEBUG   SystemMonitor:13092 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-11-16 12:44:45,437 DEBUG   SystemMonitor:13092 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-11-16 12:44:45,708 INFO    HandlerThread:13092 [interfaces.py:finish():173] Joined cpu
+2022-11-16 12:44:45,710 INFO    HandlerThread:13092 [interfaces.py:finish():173] Joined disk
+2022-11-16 12:44:45,913 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:44:45,917 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\wandb-summary.json
+2022-11-16 12:44:46,024 INFO    HandlerThread:13092 [interfaces.py:finish():173] Joined gpu
+2022-11-16 12:44:46,026 INFO    HandlerThread:13092 [interfaces.py:finish():173] Joined memory
+2022-11-16 12:44:46,027 INFO    HandlerThread:13092 [interfaces.py:finish():173] Joined network
+2022-11-16 12:44:46,029 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:46,031 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-11-16 12:44:46,032 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 2
+2022-11-16 12:44:46,036 DEBUG   SenderThread:13092 [sender.py:send():303] send: stats
+2022-11-16 12:44:46,043 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:46,044 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 2
+2022-11-16 12:44:46,045 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:46,046 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-11-16 12:44:46,047 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 3
+2022-11-16 12:44:46,051 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:46,052 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 3
+2022-11-16 12:44:46,054 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:46,055 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-11-16 12:44:46,056 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 4
+2022-11-16 12:44:46,059 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:46,060 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 4
+2022-11-16 12:44:46,062 DEBUG   SenderThread:13092 [sender.py:send():303] send: summary
+2022-11-16 12:44:46,066 INFO    SenderThread:13092 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 12:44:46,070 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:46,071 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-11-16 12:44:46,072 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 5
+2022-11-16 12:44:46,075 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:46,076 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 5
+2022-11-16 12:44:46,077 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:46,078 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-11-16 12:44:46,079 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 6
+2022-11-16 12:44:46,156 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:46,157 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 6
+2022-11-16 12:44:46,158 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:46,159 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-11-16 12:44:46,943 INFO    Thread-17 :13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\wandb-summary.json
+2022-11-16 12:44:47,064 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 12:44:47,957 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 7
+2022-11-16 12:44:47,958 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 12:44:47,962 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:47,964 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 7
+2022-11-16 12:44:47,965 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:47,966 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-11-16 12:44:47,967 INFO    SenderThread:13092 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-16 12:44:48,019 INFO    SenderThread:13092 [dir_watcher.py:_on_file_modified():292] file/dir modified: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:44:48,027 INFO    SenderThread:13092 [dir_watcher.py:finish():392] scan: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files
+2022-11-16 12:44:48,031 INFO    SenderThread:13092 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\config.yaml config.yaml
+2022-11-16 12:44:48,034 INFO    SenderThread:13092 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log output.log
+2022-11-16 12:44:48,040 INFO    SenderThread:13092 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\requirements.txt requirements.txt
+2022-11-16 12:44:48,047 INFO    SenderThread:13092 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\wandb-metadata.json wandb-metadata.json
+2022-11-16 12:44:48,049 INFO    SenderThread:13092 [dir_watcher.py:finish():406] scan save: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\wandb-summary.json wandb-summary.json
+2022-11-16 12:44:48,052 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 8
+2022-11-16 12:44:48,054 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:48,056 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 8
+2022-11-16 12:44:48,057 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:48,111 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-11-16 12:44:48,112 INFO    SenderThread:13092 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-16 12:44:48,140 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 12:44:48,158 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 12:44:50,466 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 12:44:50,550 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 12:44:51,057 INFO    Thread-29 :13092 [upload_job.py:push():143] Uploaded file D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\config.yaml
+2022-11-16 12:44:51,525 INFO    Thread-30 :13092 [upload_job.py:push():143] Uploaded file D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\output.log
+2022-11-16 12:44:51,568 INFO    Thread-31 :13092 [upload_job.py:push():143] Uploaded file D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\requirements.txt
+2022-11-16 12:44:51,925 INFO    Thread-32 :13092 [upload_job.py:push():143] Uploaded file D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\files\wandb-summary.json
+2022-11-16 12:44:52,153 INFO    Thread-16 :13092 [sender.py:transition_state():463] send defer: 9
+2022-11-16 12:44:52,160 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:52,161 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 9
+2022-11-16 12:44:52,163 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:52,164 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-11-16 12:44:52,166 INFO    SenderThread:13092 [file_pusher.py:join():173] waiting for file pusher
+2022-11-16 12:44:52,167 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 10
+2022-11-16 12:44:52,170 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:52,171 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 10
+2022-11-16 12:44:52,172 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:52,174 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-11-16 12:44:52,349 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 12:44:52,484 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 11
+2022-11-16 12:44:52,487 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 12:44:52,492 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:52,493 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 11
+2022-11-16 12:44:52,496 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:52,498 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-11-16 12:44:52,503 INFO    SenderThread:13092 [sender.py:transition_state():463] send defer: 12
+2022-11-16 12:44:52,508 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 12:44:52,509 INFO    HandlerThread:13092 [handler.py:handle_request_defer():162] handle defer: 12
+2022-11-16 12:44:52,512 DEBUG   SenderThread:13092 [sender.py:send():303] send: final
+2022-11-16 12:44:52,514 DEBUG   SenderThread:13092 [sender.py:send():303] send: footer
+2022-11-16 12:44:52,517 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: defer
+2022-11-16 12:44:52,519 INFO    SenderThread:13092 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-11-16 12:44:52,525 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 12:44:52,527 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 12:44:52,589 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 12:44:52,591 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 12:44:52,595 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: server_info
+2022-11-16 12:44:52,597 DEBUG   SenderThread:13092 [sender.py:send_request():317] send_request: server_info
+2022-11-16 12:44:52,607 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: get_summary
+2022-11-16 12:44:52,627 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: sampled_history
+2022-11-16 12:44:53,778 INFO    MainThread:13092 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-11-16 12:44:53,779 INFO    MainThread:13092 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-11-16 12:44:53,779 INFO    MainThread:13092 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-11-16 12:44:53,796 DEBUG   HandlerThread:13092 [handler.py:handle_request():139] handle_request: shutdown
+2022-11-16 12:44:53,796 INFO    HandlerThread:13092 [handler.py:finish():814] shutting down handler
+2022-11-16 12:44:54,517 INFO    WriterThread:13092 [datastore.py:close():279] close: D:\TESIS\THESIS 3\program\yolov5\yolov5_og\yolov5\wandb\run-20221116_124353-re1f7nos\run-re1f7nos.wandb
+2022-11-16 12:44:54,783 INFO    SenderThread:13092 [sender.py:finish():1331] shutting down sender
+2022-11-16 12:44:54,783 INFO    SenderThread:13092 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-16 12:44:54,784 INFO    SenderThread:13092 [file_pusher.py:join():173] waiting for file pusher
+2022-11-16 12:44:54,894 INFO    MainThread:13092 [internal.py:handle_exit():78] Internal process exited

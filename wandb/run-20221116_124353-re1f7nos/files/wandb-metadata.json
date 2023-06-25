@@ -1,0 +1,61 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.7.4",
+    "heartbeatAt": "2022-11-16T05:43:55.266614",
+    "startedAt": "2022-11-16T05:43:53.565263",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--img",
+        "640",
+        "--batch",
+        "16",
+        "--epochs",
+        "3",
+        "--data",
+        "data.yaml",
+        "--weights",
+        "yolov5s.pt"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/AgusRaharja69/palletYolov5.git",
+        "commit": "2b6e4d1388fec0d4c7e758671d6973165054f08f"
+    },
+    "email": "raharja.wahyu.agus.kadek@gmail.com",
+    "root": "D:/TESIS/THESIS 3/program/yolov5/yolov5_og/yolov5",
+    "host": "DESKTOP-MMTU9NA",
+    "username": "user",
+    "executable": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2511.0,
+        "min": 0.0,
+        "max": 2712.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2511.0,
+            "min": 0.0,
+            "max": 2712.0
+        }
+    ],
+    "disk": {
+        "total": 785.0253868103027,
+        "used": 542.5111541748047
+    },
+    "gpu": "GeForce 940MX",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "GeForce 940MX",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 7.8840789794921875
+    }
+}

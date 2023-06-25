@@ -1,0 +1,60 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.7.4",
+    "heartbeatAt": "2022-11-11T19:06:30.823353",
+    "startedAt": "2022-11-11T19:06:29.596637",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--data",
+        "data.yaml",
+        "--img",
+        "640",
+        "--batch",
+        "16",
+        "--epochs",
+        "250",
+        "--weights",
+        "yolov5s.pt"
+    ],
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/ultralytics/yolov5",
+        "commit": "75728bb3ea99113f306280b734dedcc5d7d067b1"
+    },
+    "email": "raharja.wahyu.agus.kadek@gmail.com",
+    "root": "D:/TESIS/THESIS 3/program/yolov5/yolov5_og/yolov5",
+    "host": "DESKTOP-MMTU9NA",
+    "username": "user",
+    "executable": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2511.0,
+        "min": 0.0,
+        "max": 2712.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2511.0,
+            "min": 0.0,
+            "max": 2712.0
+        }
+    ],
+    "disk": {
+        "total": 785.0253868103027,
+        "used": 542.1158409118652
+    },
+    "gpu": "GeForce 940MX",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "GeForce 940MX",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 7.8840789794921875
+    }
+}
