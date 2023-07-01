@@ -129,10 +129,17 @@ for im0, det in run():
 
     ''' Stream results '''
     im0 = np.asarray(im0)
-    # if platform.system() == 'Linux' and p not in windows:
-    #     windows.append(p)
-    #     cv2.namedWindow(str(p), cv2.WINDOW_NORMAL | cv2.WINDOW_KEEPRATIO)  # allow window resize (Linux)
-    #     cv2.resizeWindow(str(p), im0.shape[1], im0.shape[0])
-    cv2.imshow(str(1), im0)
-    cv2.waitKey(1)  # 1 millisecond
+        # if platform.system() == 'Linux' and p not in windows:
+        #     windows.append(p)
+        #     cv2.namedWindow(str(p), cv2.WINDOW_NORMAL | cv2.WINDOW_KEEPRATIO)  # allow window resize (Linux)
+        #     cv2.resizeWindow(str(p), im0.shape[1], im0.shape[0])
+
+    while(len(im0)==480):
+        cv2.imshow(str(1), im0)
+        key = cv2.waitKey(1)  # 1 millisecond
+        if key == ord('s'):
+            from pathlib import Path
+            image_dir = Path("exp-data/images")
+            nb_files = len(list(image_dir.glob("saved_img_*.jpg")))
+            cv2.imwrite(str(image_dir / f"saved_img_{nb_files}.jpg"), im0)
 

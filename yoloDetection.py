@@ -1,15 +1,16 @@
 import torch
 
 from models.common import DetectMultiBackend
-from utils.dataloaders import LoadStreams
+from utils.dataloaders import LoadStreams, LoadImages
 from utils.general import (Profile, check_img_size, cv2,
                            non_max_suppression, scale_boxes)
 from utils.torch_utils import select_device
 
 # @smart_inference_mode()
 def run(
-        weights='runs/train/exp21/weights/best.pt',  # model path or triton URL
-        source='1',  # file/dir/URL/glob/screen/0(webcam)
+        weights='runs/train/exp15/weights/best.pt',  # model path or triton URL
+        # source='1',  # file/dir/URL/glob/screen/0(webcam)
+        source = 'saved_img_6.jpg',
         data='data/data.yaml',  # dataset.yaml path
         imgsz=(320, 320),  # inference size (height, width)
         conf_thres=0.25,  # confidence threshold
@@ -31,8 +32,11 @@ def run(
     imgsz = check_img_size(imgsz, s=stride)  # check image size
 
     # Dataloader
-    dataset = LoadStreams(source, img_size=imgsz, stride=stride, auto=pt, vid_stride=vid_stride)
-    bs = len(dataset)
+    # dataset = LoadStreams(source, img_size=imgsz, stride=stride, auto=pt, vid_stride=vid_stride)
+    # bs = len(dataset)
+    #######
+    dataset = LoadImages(source, img_size=imgsz, stride=stride, auto=pt, vid_stride=vid_stride)
+    bs = 1
     # Run inference
     model.warmup(imgsz=(1 if pt or model.triton else bs, 3, *imgsz))  # warmup
     dt =(Profile(), Profile(), Profile())
@@ -55,7 +59,8 @@ def run(
 
         # Process predictions
         for i, det in enumerate(pred):  # per image
-            im0= im0s[i].copy()        
+            # im0= im0s[i].copy()
+            im0= im0s.copy()        
             if len(det):
                 # Rescale boxes from img_size to im0 size
                 det[:, :4] = scale_boxes(im.shape[2:], det[:, :4], im0.shape).round() 
