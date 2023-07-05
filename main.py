@@ -1,12 +1,13 @@
 from yoloDetection import run
+from lidarProj import get_proj
 import cv2
 import numpy as np
 import json
 # import platform # When using Linux
 
-weights_name = 'yolov5s-100'
+weights_name = "yolov5s-100"
 cv_font = cv2.FONT_HERSHEY_SIMPLEX
-jsonLidarPath = '../lidarJson.json'
+jsonLidarPath = "exp-data/lidar/data_1.json"
 angle, lidarDist = [], []
 
 ''' Euclidean '''
@@ -30,9 +31,9 @@ def focal_length(xy,confidence):
 def dist_pinhole(xy,X,Y,im0_shape,confidence):
     W = 50
     F = 952.69 if weights_name == 'yolov5m-100' else 989.057 if weights_name == 'yolov5s-100' else 975.829
-    D = 0
+    D = None
 
-    if confidence > 0.4:
+    if confidence > 0.5:
         # print("xy: ",xy)
         # print("X: ", X)
         # print("Y: ", Y)
@@ -50,39 +51,36 @@ def dist_pinhole(xy,X,Y,im0_shape,confidence):
     return D
 
 ''' Find distance using 2D LiDAR camera fusion with angle similiarity '''
-def dist_lidar(xy,X,Y,im0_shape,confidence):
+def dist_lidar(xy,im0_shape,confidence):
     ''' Opening LiDAR data '''  
     with open(jsonLidarPath) as f:
         try :
             lidar_data = json.load(f)
         except:
             lidar_data = {"data": [[0,0,0]]}
-
-    # LiDAR data
-    dataLidar = np.array(lidar_data['data'])
-    angleRawLidar = np.radians(dataLidar[:, 1]) # Convert angle to radians
-    rangeLidar = dataLidar[:, 2]
-    angleLidar = np.pi - angleRawLidar #mirror
+    D = None
     
-    # Angle by camera
-    FoV = 55
-    dispPix = int(im0_shape)
+    if confidence > 0.5:
+        # LiDAR data
+        dataLidar = np.array(lidar_data['data'])
+        angleRawLidar = np.radians(dataLidar[:, 1]) # Convert angle to radians
+        rangeLidar = dataLidar[:, 2]
+        angleLidar = np.pi - angleRawLidar #mirror
+        
+        # Angle by camera
+        FoV = 55
+        dispPix = int(im0_shape)
 
-    detectWidth = round(int(xy[2] - xy[0])/5)
-    AnglePix = [int(xy[0]),(int(xy[0])+detectWidth),(int(xy[2])-detectWidth),int(xy[2])]
-    angleCamDet = [x*(FoV/dispPix) for x in AnglePix]
-    angleCam = np.radians([90 + (FoV/2) - x for x in angleCamDet])
+        detectWidth = round(int(xy[2] - xy[0])/5)
+        AnglePix = [int(xy[0]),(int(xy[0])+detectWidth),(int(xy[2])-detectWidth),int(xy[2])]
+        angleCamDet = [x*(FoV/dispPix) for x in AnglePix]
+        angleCam = np.radians([90 + (FoV/2) - x for x in angleCamDet])
 
-    # Scan dist
-    angleArrayId = [angleLidar.index(x) for x in angleLidar if (x>=angleCam[0] and x<=angleCam[1]) or (x>=angleCam[2] and x<=angleCam[3])]
-    D = np.median([rangeLidar[x] for x in angleArrayId])    
-    # D = lidarDist
+        # Scan dist
+        angleArrayId = [angleLidar.index(x) for x in angleLidar if (x>=angleCam[0] and x<=angleCam[1]) or (x>=angleCam[2] and x<=angleCam[3])]
+        D = np.median([rangeLidar[x] for x in angleArrayId])    
+        # D = lidarDist
     return D
-
-def projection(X,Y):
-    lidarPixelX = X
-    lidarPixelY = Y
-    return lidarPixelX, lidarPixelY
 
 ''' Main Program '''
 for im0, det in run():    
@@ -125,7 +123,20 @@ for im0, det in run():
 
         ''' Find Object Distance '''
         dist = dist_pinhole(xyxy,x,y,im0.shape[1],conf)
-        print('Distance: ',dist)
+        # dist = dist_lidar(xyxy,im0.shape[1],conf)
+        # print('Distance: ',dist)
+        cv2.putText(im0, text=str(dist) + "cm", org=(p2[0]+20, p1[1]+5),  # distance
+        fontFace=cv_font, fontScale=0.5, color=(0, 255, 25), thickness=1, lineType=cv2.LINE_AA)
+
+        # '''projection'''
+        # points = get_proj(jsonLidarPath)
+        # for i in range(len(points)):
+        #     try:
+        #         x = int(round(points[i][0]))
+        #         y = int(round(points[i][1]))
+        #         cv2.circle(im0, (x, y), 1, (0, 0, 255), 2)
+        #     except OverflowError:
+        #         continue 
 
     ''' Stream results '''
     im0 = np.asarray(im0)
@@ -135,11 +146,12 @@ for im0, det in run():
         #     cv2.resizeWindow(str(p), im0.shape[1], im0.shape[0])
 
     while(len(im0)==480):
+        
         cv2.imshow(str(1), im0)
         key = cv2.waitKey(1)  # 1 millisecond
         if key == ord('s'):
             from pathlib import Path
-            image_dir = Path("exp-data/images")
-            nb_files = len(list(image_dir.glob("saved_img_*.jpg")))
-            cv2.imwrite(str(image_dir / f"saved_img_{nb_files}.jpg"), im0)
+            image_dir = Path("exp-data/images/detect")
+            nb_files = len(list(image_dir.glob("img_*.jpg"))) + 1
+            cv2.imwrite(str(image_dir / f"img_{nb_files}.jpg"), im0)
 

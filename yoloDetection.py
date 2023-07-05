@@ -8,9 +8,9 @@ from utils.torch_utils import select_device
 
 # @smart_inference_mode()
 def run(
-        weights='runs/train/exp15/weights/best.pt',  # model path or triton URL
+        weights='runs/train/exp16/weights/best.pt',  # model path or triton URL
         # source='1',  # file/dir/URL/glob/screen/0(webcam)
-        source = 'saved_img_6.jpg',
+        source = 'exp-data/images/img_5.jpg',
         data='data/data.yaml',  # dataset.yaml path
         imgsz=(320, 320),  # inference size (height, width)
         conf_thres=0.25,  # confidence threshold
